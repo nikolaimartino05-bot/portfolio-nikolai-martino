@@ -2953,6 +2953,20 @@ input[name="_honey"] {
 .ps-gallery__btn:hover .ps-gallery__zoom { transform: scale(1); }
 .ps-gallery__btn:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
 
+.ps-gallery__btn--full {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.ps-gallery__btn--full .pf-project__preview {
+  width: 100%;
+  display: block;
+}
+
 .ps-gallery__cap {
   font-size: var(--size-xs);
   font-weight: 600;

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Il Viaggio di Leonardo — UX/UI Design · Nikolai Martino</title>
+  <meta name="description" content="Progetto d'esame IED AA 25/26: esperienza interattiva phygital per il Museo Nazionale Scienza e Tecnologia Leonardo da Vinci. Analisi, moodboard, UI design e presentazione.">
+
+  <meta property="og:title" content="Il Viaggio di Leonardo — UX/UI Design · Nikolai Martino">
+  <meta property="og:description" content="Rebranding dell'esperienza digitale del Museo Leonardo da Vinci: dalla mente all'universo digitale.">
+  <meta property="og:image" content="img/esame-leonardo/moodboard.png">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="img/logo/logo-nm-clean.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20260706b">
+  <script src="js/cookie-consent.js"></script>
+</head>
+<body class="has-starfield">
+
+  <div class="starfield" id="starfield" aria-hidden="true"></div>
+
+  <header class="navbar navbar--solid">
+    <nav class="navbar__inner" aria-label="Navigazione principale">
+      <ul class="navbar__links navbar__links--left">
+        <li><a href="index.html" class="navbar__link">Home</a></li>
+        <li><a href="bio.html" class="navbar__link">Bio</a></li>
+      </ul>
+      <a href="index.html" class="navbar__logo" aria-label="Nikolai Martino — Homepage">
+        <img src="img/logo/logo-nm-clean.png" alt="Logo NM" class="navbar__logo-img">
+      </a>
+      <ul class="navbar__links navbar__links--right">
+        <li><a href="portfolio.html" class="navbar__link active" aria-current="page">Portfolio</a></li>
+        <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
+      </ul>
+      <button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu" aria-label="Apri menu">☰</button>
+    </nav>
+    <div class="navbar__mobile" id="navbar-menu">
+      <ul class="navbar__mobile-links">
+        <li><a href="index.html" class="navbar__link">Home</a></li>
+        <li><a href="bio.html" class="navbar__link">Bio</a></li>
+        <li><a href="portfolio.html" class="navbar__link active">Portfolio</a></li>
+        <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="pv-hero" aria-labelledby="lv-heading">
+      <div class="container">
+        <a href="portfolio.html" class="pv-back">← Torna al Portfolio</a>
+        <div class="pv-hero__meta">
+          <span class="pv-hero__tag">UX/UI Design</span>
+          <span class="pv-hero__dot" aria-hidden="true">·</span>
+          <span class="pv-hero__year">2026 — IED Roma</span>
+        </div>
+        <h1 class="pv-hero__title" id="lv-heading">Il Viaggio di Leonardo</h1>
+        <p class="pv-hero__sub">
+          <em>Dalla Mente all'Universo Digitale</em> — progetto d'esame per il corso <strong>Informazioni per l'arte, mezzi e metodi</strong> (AA 25/26). Ho scelto la terza opzione del brief accademico: <strong>progettare un'esperienza interattiva per un museo</strong>. Il focus è il <strong>Museo Nazionale Scienza e Tecnologia Leonardo da Vinci</strong> di Milano: un rebranding dell'ecosistema digitale che trasforma la visita in un viaggio phygital guidato da Leonardo stesso.
+        </p>
+        <div class="pv-hero__chips">
+          <span class="pv-chip">Design Thinking</span>
+          <span class="pv-chip">Figma</span>
+          <span class="pv-chip">Moodboard</span>
+          <span class="pv-chip">Gamification</span>
+          <span class="pv-chip">AR &amp; UX</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="bio-page-divider" aria-hidden="true">
+      <span class="bio-page-divider__line"></span>
+      <span class="bio-page-divider__ornament">◆</span>
+      <span class="bio-page-divider__line"></span>
+    </div>
+
+    <!-- I — BRIEF -->
+    <section class="pv-section" aria-labelledby="lv-brief-heading">
+      <div class="container">
+        <div class="pv-section__header">
+          <span class="pv-section__num" aria-hidden="true">I</span>
+          <div>
+            <p class="pv-section__label">Brief accademico</p>
+            <h2 class="pv-section__title" id="lv-brief-heading">Perché questo museo</h2>
+          </div>
+        </div>
+        <p class="pv-section__desc">
+          Tra le tre opzioni del syllabus — brand fashion, brand beauty, esperienza per museo — ho scelto la terza perché offre la maggiore complessità narrativa e la possibilità di lavorare su un caso reale con impatto concreto su branding, marketing e user experience. Il Museo Leonardo da Vinci unisce storia, scienza e innovazione: un terreno ideale per costruire un ponte tra passato rinascimentale e tecnologie del futuro.
+        </p>
+        <div class="pf-project__body">
+          <div class="pf-project__desc">
+            <p>
+              Il museo presenta un patrimonio vastissimo — da Leonardo allo spazio, dai trasporti all'energia — ma l'offerta digitale attuale è frammentata in micro-app verticali che non dialogano tra loro. Il mio obiettivo è stato creare un'identità visiva e un flusso utente unificati che rendano la visita memorabile per studenti e giovani adulti (18–30 anni).
+            </p>
+            <p>
+              Ho seguito il metodo richiesto dal corso: niente «lista della spesa», ma design thinking — analisi del contesto, target, moodboard, concept, user flow e UI — raccontato come un pitch al direttore del museo.
+            </p>
+          </div>
+          <div class="pf-project__info">
+            <div class="pf-project__info-item">
+              <p class="pf-project__info-label">Corso</p>
+              <p class="pf-project__info-val">Informazioni per l'arte</p>
+            </div>
+            <div class="pf-project__info-item">
+              <p class="pf-project__info-label">Cliente</p>
+              <p class="pf-project__info-val">Museo Leonardo da Vinci</p>
+            </div>
+            <div class="pf-project__info-item">
+              <p class="pf-project__info-label">Anno</p>
+              <p class="pf-project__info-val">2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bio-page-divider" aria-hidden="true">
+      <span class="bio-page-divider__line"></span>
+      <span class="bio-page-divider__ornament">◆</span>
+      <span class="bio-page-divider__line"></span>
+    </div>
+
+    <!-- II — ANALISI -->
+    <section class="pv-section ps-gallery-section" aria-labelledby="lv-analisi-heading">
+      <div class="container">
+        <div class="pv-section__header">
+          <span class="pv-section__num" aria-hidden="true">II</span>
+          <div>
+            <p class="pv-section__label">Design Thinking</p>
+            <h2 class="pv-section__title" id="lv-analisi-heading">Analisi del contesto</h2>
+          </div>
+        </div>
+        <p class="pv-section__desc">
+          Ho analizzato l'ecosistema digitale esistente del museo e le criticità per il target giovane. Due problemi principali guidano tutto il progetto: la <strong>frammentazione</strong> delle app verticali (Toti, ferrovie, ecc.) e il <strong>basso engagement pre-visita</strong>, con contenuti istituzionali che non incentivano il download dell'app prima di arrivare in museo.
+        </p>
+        <figure class="pf-project__figure">
+          <button class="ps-gallery__btn ps-gallery__btn--full" data-img="img/esame-leonardo/analisi-museo.png" data-caption="Analisi del museo in cifre — dati e contesto istituzionale" aria-label="Apri analisi museo a schermo intero">
+            <img src="img/esame-leonardo/analisi-museo.png" alt="Analisi del Museo Nazionale Scienza e Tecnologia — dati e contesto" class="pf-project__preview" loading="lazy">
+          </button>
+          <figcaption class="pf-project__figcap">Il museo in cifre — analisi del contesto istituzionale</figcaption>
+        </figure>
+        <div class="pf-project__desc" style="margin-top: 2rem;">
+          <p><strong>Obiettivi progettuali:</strong></p>
+          <ul>
+            <li><strong>Unità narrativa</strong> — usare Leonardo come filo conduttore tra le diverse anime del museo</li>
+            <li><strong>Esperienza memorabile</strong> — trasformare la visita in un'avventura phygital interattiva</li>
+            <li><strong>Valore pre-visita</strong> — quiz, AR e gamification già da casa per superare la barriera del download</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="bio-page-divider" aria-hidden="true">
+      <span class="bio-page-divider__line"></span>
+      <span class="bio-page-divider__ornament">◆</span>
+      <span class="bio-page-divider__line"></span>
+    </div>
+
+    <!-- III — MOODBOARD -->
+    <section class="pv-section ps-gallery-section" aria-labelledby="lv-moodboard-heading">
+      <div class="container">
+        <div class="pv-section__header">
+          <span class="pv-section__num" aria-hidden="true">III</span>
+          <div>
+            <p class="pv-section__label">Visual Research</p>
+            <h2 class="pv-section__title" id="lv-moodboard-heading">Moodboard</h2>
+          </div>
+        </div>
+        <p class="pv-section__desc">
+          L'estetica <em>Rinascimento-Futuristica</em> fonde i blueprint originali di Leonardo con interfacce digitali moderne. La palette unisce blu profondo e space blue per il contesto tecnologico, verde acqua per l'interazione e l'AR, oro e bronzo per la dimensione rinascimentale — con grigi e bianchi per la leggibilità.
+        </p>
+        <figure class="pf-project__figure">
+          <button class="ps-gallery__btn ps-gallery__btn--full" data-img="img/esame-leonardo/moodboard.png" data-caption="Moodboard — estetica Rinascimento-Futuristica" aria-label="Apri moodboard a schermo intero">
+            <img src="img/esame-leonardo/moodboard.png" alt="Moodboard Il Viaggio di Leonardo — Leonardo, VR, AI, architettura e palette colori" class="pf-project__preview" loading="lazy">
+          </button>
+          <figcaption class="pf-project__figcap">Moodboard — Leonardo, tecnologia, architettura e palette cromatica</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="bio-page-divider" aria-hidden="true">
+      <span class="bio-page-divider__line"></span>
+      <span class="bio-page-divider__ornament">◆</span>
+      <span class="bio-page-divider__line"></span>
+    </div>
+
+    <!-- IV — TARGET & CONCEPT -->
+    <section class="pv-section" aria-labelledby="lv-concept-heading">
+      <div class="container">
+        <div class="pv-section__header">
+          <span class="pv-section__num" aria-hidden="true">IV</span>
+          <div>
+            <p class="pv-section__label">Target &amp; Concept</p>
+            <h2 class="pv-section__title" id="lv-concept-heading">L'idea progettuale</h2>
+          </div>
+        </div>
+        <p class="pv-section__desc">
+          Il target sono <strong>studenti e giovani adulti (18–30 anni)</strong>: nativi digitali, mobile-first, in cerca di esperienze autentiche, personalizzate e condivisibili sui social. Leonardo diventa <strong>Mentore e Game Master</strong> dell'intera esperienza — non un semplice soggetto espositivo, ma la guida spirituale che collega le gallerie dedicate a lui con i padiglioni dello spazio, dei trasporti e dell'energia.
+        </p>
+        <div class="pf-project__desc">
+          <p><strong>Le tre fasi dell'esperienza:</strong></p>
+          <ul>
+            <li><strong>Pre-visita</strong> — quiz interattivi e modelli AR da casa; raccolta delle prime «Scintille di Genio»</li>
+            <li><strong>In-museo</strong> — mappa 3D, sfide AR sui reperti reali, badge e ricompense in tempo reale</li>
+            <li><strong>Post-visita</strong> — diario digitale, attestato di genio e condivisione social per viralità organica</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="bio-page-divider" aria-hidden="true">
+      <span class="bio-page-divider__line"></span>
+      <span class="bio-page-divider__ornament">◆</span>
+      <span class="bio-page-divider__line"></span>
+    </div>
+
+    <!-- V — UI DESIGN -->
+    <section class="pv-section ps-gallery-section" aria-labelledby="lv-ui-heading">
+      <div class="container">
+        <div class="pv-section__header">
+          <span class="pv-section__num" aria-hidden="true">V</span>
+          <div>
+            <p class="pv-section__label">UI Design</p>
+            <h2 class="pv-section__title" id="lv-ui-heading">Le schermate Figma</h2>
+          </div>
+        </div>
+        <p class="pv-section__desc">
+          Ho progettato otto schermate mobile complete — dalla home all'attestato finale — con card glassmorphism, micro-elementi da blueprint tecnico e navigazione inferiore coerente. Ogni schermata risponde a una funzione strategica del percorso utente.
+        </p>
+
+        <figure class="pf-project__figure">
+          <button class="ps-gallery__btn ps-gallery__btn--full" data-img="img/esame-leonardo/ui/00_overview_tutte_schermate.png" data-caption="Overview — tutte le schermate del progetto" aria-label="Apri overview schermate">
+            <img src="img/esame-leonardo/ui/00_overview_tutte_schermate.png" alt="Overview di tutte le schermate UI — Il Viaggio di Leonardo" class="pf-project__preview" loading="lazy">
+          </button>
+          <figcaption class="pf-project__figcap">Overview — le otto schermate del sistema</figcaption>
+        </figure>
+
+        <div class="ps-gallery ps-gallery--portrait" style="margin-top: 2rem;">
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/ui/01_home_onboarding.png" data-caption="01 — Home / Onboarding: inizio del viaggio" aria-label="Schermata Home">
+              <img src="img/esame-leonardo/ui/01_home_onboarding.png" alt="Home screen onboarding" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">01 — Home</figcaption>
+          </figure>
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/ui/02_scelta_rotta.png" data-caption="02 — Scelta percorso: Leonardo, Spazio, Energia" aria-label="Schermata scelta rotta">
+              <img src="img/esame-leonardo/ui/02_scelta_rotta.png" alt="Scelta percorso" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">02 — Scelta rotta</figcaption>
+          </figure>
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/ui/03_mappa_interattiva.png" data-caption="03 — Mappa interattiva 3D dei padiglioni" aria-label="Schermata mappa">
+              <img src="img/esame-leonardo/ui/03_mappa_interattiva.png" alt="Mappa interattiva" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">03 — Mappa</figcaption>
+          </figure>
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/ui/04_tappa_galleria.png" data-caption="04 — Tappa galleria con AR, quiz e diario" aria-label="Schermata tappa galleria">
+              <img src="img/esame-leonardo/ui/04_tappa_galleria.png" alt="Tappa galleria" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">04 — Galleria</figcaption>
+          </figure>
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/ui/05_ar_scanner.png" data-caption="05 — Scanner AR per i reperti" aria-label="Schermata AR">
+              <img src="img/esame-leonardo/ui/05_ar_scanner.png" alt="Scanner AR" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">05 — AR Scanner</figcaption>
+          </figure>
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/ui/06_quiz.png" data-caption="06 — Quiz interattivo con gamification" aria-label="Schermata quiz">
+              <img src="img/esame-leonardo/ui/06_quiz.png" alt="Quiz interattivo" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">06 — Quiz</figcaption>
+          </figure>
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/ui/07_profilo_diario.png" data-caption="07 — Profilo e diario di viaggio" aria-label="Schermata profilo">
+              <img src="img/esame-leonardo/ui/07_profilo_diario.png" alt="Profilo e diario" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">07 — Profilo</figcaption>
+          </figure>
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/ui/08_premi_attestato.png" data-caption="08 — Premi e attestato di genio" aria-label="Schermata premi">
+              <img src="img/esame-leonardo/ui/08_premi_attestato.png" alt="Premi e attestato" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">08 — Attestato</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <div class="bio-page-divider" aria-hidden="true">
+      <span class="bio-page-divider__line"></span>
+      <span class="bio-page-divider__ornament">◆</span>
+      <span class="bio-page-divider__line"></span>
+    </div>
+
+    <!-- VI — PRESENTAZIONE -->
+    <section class="pv-section ps-gallery-section" aria-labelledby="lv-pres-heading">
+      <div class="container">
+        <div class="pv-section__header">
+          <span class="pv-section__num" aria-hidden="true">VI</span>
+          <div>
+            <p class="pv-section__label">Pitch d'esame</p>
+            <h2 class="pv-section__title" id="lv-pres-heading">La presentazione</h2>
+          </div>
+        </div>
+        <p class="pv-section__desc">
+          La presentazione finale racconta il progetto come un pitch al direttore del museo: dal contesto al concept, dal flusso utente alle schermate chiave, fino alle conclusioni su spendibilità e visione phygital. Clicca sulle slide per ingrandirle.
+        </p>
+
+        <div class="ps-gallery ps-gallery--wide">
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/slides/slide-01.png" data-caption="Slide 01 — Il Viaggio di Leonardo" aria-label="Slide 1">
+              <img src="img/esame-leonardo/slides/slide-01.png" alt="Slide 1 presentazione esame" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">01 — Titolo</figcaption>
+          </figure>
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/slides/slide-02.jpeg" data-caption="Slide 02 — Analisi del contesto" aria-label="Slide 2">
+              <img src="img/esame-leonardo/slides/slide-02.jpeg" alt="Slide 2 analisi contesto" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">02 — Analisi</figcaption>
+          </figure>
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/slides/slide-03.png" data-caption="Slide 03 — Moodboard" aria-label="Slide 3">
+              <img src="img/esame-leonardo/slides/slide-03.png" alt="Slide 3 moodboard" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">03 — Moodboard</figcaption>
+          </figure>
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/slides/slide-04.jpeg" data-caption="Slide 04 — Target Analysis 18-25" aria-label="Slide 4">
+              <img src="img/esame-leonardo/slides/slide-04.jpeg" alt="Slide 4 target" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">04 — Target</figcaption>
+          </figure>
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/slides/slide-05.jpeg" data-caption="Slide 05 — Concept progettuale" aria-label="Slide 5">
+              <img src="img/esame-leonardo/slides/slide-05.jpeg" alt="Slide 5 concept" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">05 — Concept</figcaption>
+          </figure>
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/slides/slide-06.jpeg" data-caption="Slide 06 — Flusso dell'esperienza" aria-label="Slide 6">
+              <img src="img/esame-leonardo/slides/slide-06.jpeg" alt="Slide 6 user flow" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">06 — User Flow</figcaption>
+          </figure>
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/slides/slide-07.jpeg" data-caption="Slide 07 — Home Screen" aria-label="Slide 7">
+              <img src="img/esame-leonardo/slides/slide-07.jpeg" alt="Slide 7 home screen" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">07 — Home Screen</figcaption>
+          </figure>
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/slides/slide-08.jpeg" data-caption="Slide 08 — Mappa interattiva" aria-label="Slide 8">
+              <img src="img/esame-leonardo/slides/slide-08.jpeg" alt="Slide 8 mappa" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">08 — Mappa</figcaption>
+          </figure>
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/slides/slide-09.jpeg" data-caption="Slide 09 — AR e Gamification" aria-label="Slide 9">
+              <img src="img/esame-leonardo/slides/slide-09.jpeg" alt="Slide 9 AR gamification" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">09 — AR &amp; Quiz</figcaption>
+          </figure>
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/slides/slide-10.jpeg" data-caption="Slide 10 — Profilo e viralità" aria-label="Slide 10">
+              <img src="img/esame-leonardo/slides/slide-10.jpeg" alt="Slide 10 profilo" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">10 — Profilo</figcaption>
+          </figure>
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame-leonardo/slides/slide-11.jpeg" data-caption="Slide 11 — Conclusioni" aria-label="Slide 11">
+              <img src="img/esame-leonardo/slides/slide-11.jpeg" alt="Slide 11 conclusioni" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">11 — Conclusioni</figcaption>
+          </figure>
+        </div>
+
+        <div class="pf-project__cta-wrap" style="margin-top: 2rem;">
+          <a href="img/esame-leonardo/progetto-esame.pdf" class="btn btn--outline" target="_blank" rel="noopener noreferrer">↓ Scarica il documento di progetto (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="bio-page-divider" aria-hidden="true">
+      <span class="bio-page-divider__line"></span>
+      <span class="bio-page-divider__ornament">◆</span>
+      <span class="bio-page-divider__line"></span>
+    </div>
+
+    <section class="pv-next-project" aria-labelledby="lv-next-heading">
+      <div class="container">
+        <div class="pv-next-project__inner">
+          <h2 class="pv-next-project__label" id="lv-next-heading">Altri progetti</h2>
+          <p class="pv-next-project__title">Orizzonte in Fumo</p>
+          <p class="pv-next-project__tag">Video Editing</p>
+          <a href="portfolio-video.html" class="btn btn--primary">Vai al progetto Video →</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="pv-footer-nav pv-footer-nav--split">
+      <a href="portfolio.html" class="btn btn--outline">← Tutti i progetti</a>
+      <a href="contatti.html" class="btn btn--outline">Contattami</a>
+    </div>
+
+  </main>
+
+  <div id="ps-lightbox" class="ps-lightbox" role="dialog" aria-modal="true" aria-label="Visualizzatore immagine" hidden>
+    <button class="ps-lightbox__close" id="ps-lightbox-close" aria-label="Chiudi">✕</button>
+    <div class="ps-lightbox__backdrop" id="ps-lightbox-backdrop"></div>
+    <figure class="ps-lightbox__figure">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" class="ps-lightbox__img" id="ps-lightbox-img">
+      <figcaption class="ps-lightbox__cap" id="ps-lightbox-cap"></figcaption>
+    </figure>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">Nikolai Martino</p>
+          <p class="footer__tagline">Media Designer · Roma</p>
+          <div class="footer__social">
+            <a href="https://www.linkedin.com/in/nikolai-martino-71b693373/" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+        <nav aria-label="Navigazione footer">
+          <p class="footer__heading">Navigazione</p>
+          <ul class="footer__nav">
+            <li><a href="index.html" class="footer__nav-link">Home</a></li>
+            <li><a href="bio.html" class="footer__nav-link">Bio</a></li>
+            <li><a href="portfolio.html" class="footer__nav-link">Portfolio</a></li>
+            <li><a href="contatti.html" class="footer__nav-link">Contatti</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="footer__heading">Contatti</p>
+          <p class="footer__contact-item"><a href="mailto:nikolaimartino05@gmail.com">nikolaimartino05@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Nikolai Martino — Tutti i diritti riservati</p>
+        <a href="privacy.html" class="footer__privacy-link">Privacy Policy &amp; Cookie</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-banner-title" aria-live="polite">
+    <div class="cookie-banner__inner">
+      <p class="cookie-banner__text" id="cookie-banner-title">
+        Questo sito utilizza cookie tecnici per garantire il corretto funzionamento.
+        Leggi la <a href="privacy.html">Privacy &amp; Cookie Policy</a> per saperne di più.
+      </p>
+      <div class="cookie-banner__actions">
+        <button id="reject-cookies" type="button" class="btn btn--outline-white">Rifiuta</button>
+        <button id="accept-cookies" type="button" class="btn btn--primary">Accetta</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js?v=20260706b"></script>
+</body>
+</html>
