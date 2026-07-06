@@ -232,7 +232,7 @@ document.querySelectorAll('.carousel').forEach(initCarousel);
     '.project-meta',
     '.project-body',
     '.contatti-info__item',
-    '.map-wrap',
+    '.contatti-email',
     '.cta-section__title',
     '.cta-section__text',
     '.portfolio-project__figure',
@@ -330,10 +330,18 @@ document.querySelectorAll('.carousel').forEach(initCarousel);
   });
 }());
 /* ------------------------------------------------------------
-   Form — prevent default submit on static site
+   Form — live forms submit to FormSubmit; demo forms show fake success
    ------------------------------------------------------------ */
 (function () {
-  document.querySelectorAll('.form').forEach(form => {
+  const params = new URLSearchParams(window.location.search);
+  const successEl = document.getElementById('form-success');
+  if (successEl && params.get('invio') === 'ok') {
+    successEl.hidden = false;
+    successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    window.history.replaceState({}, '', window.location.pathname + (window.location.hash || ''));
+  }
+
+  document.querySelectorAll('.form:not(.form--live)').forEach(form => {
     form.addEventListener('submit', e => {
       e.preventDefault();
       form.reset();
@@ -346,6 +354,16 @@ document.querySelectorAll('.carousel').forEach(initCarousel);
         btn.textContent = original;
         btn.disabled = false;
       }, 3000);
+    });
+  });
+
+  document.querySelectorAll('.form--live').forEach(form => {
+    form.addEventListener('submit', () => {
+      const btn = form.querySelector('[type="submit"]');
+      if (btn) {
+        btn.textContent = 'Invio in corso…';
+        btn.disabled = true;
+      }
     });
   });
 }());

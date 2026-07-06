@@ -275,7 +275,6 @@
           </p>
           <div class="bio-hero__actions">
             <a href="bio.html" class="btn btn--outline bio-hero__btn">Scopri di più</a>
-            <a href="img/cv/CV.pdf" download class="btn btn--ghost bio-hero__btn">↓ Scarica il CV</a>
           </div>
         </div>
 
@@ -330,7 +329,21 @@
           Scrivimi un messaggio, sarò felice di discutere come posso aiutarti a dare forma alla tua idea.
         </p>
 
-        <form class="form form--dark form-container" method="post" novalidate>
+        <div class="form-alert form-alert--success" id="form-success" role="status" hidden>
+          Grazie! Il tuo messaggio è stato inviato. Ti rispondo entro 24 ore lavorative.
+        </div>
+
+        <form
+          class="form form--dark form-container form--live"
+          action="https://formsubmit.co/nikolaimartino05@gmail.com"
+          method="POST"
+          accept-charset="UTF-8"
+        >
+          <input type="hidden" name="_subject" value="Nuovo messaggio dal sito — Home">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://nikolaimartino05-bot.github.io/progettazione_multimediale_esame_2026/index.html?invio=ok#contact-form-heading">
+          <input type="text" name="_honey" class="form__honey" tabindex="-1" autocomplete="off" aria-hidden="true">
 
           <div class="form__row form__row--2">
             <div class="form__group">

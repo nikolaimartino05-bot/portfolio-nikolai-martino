@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Contatti — Nikolai Martino, Media Designer a Roma</title>
-  <meta name="description" content="Contatta Nikolai Martino, Media Designer a Roma. Indirizzo, email, telefono, mappa e modulo di contatto per richiedere un preventivo o avviare una collaborazione.">
+  <meta name="description" content="Contatta Nikolai Martino, Media Designer a Roma. Scrivimi via email o compila il modulo per avviare una collaborazione o richiedere un preventivo.">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Contatti — Nikolai Martino, Media Designer">
@@ -98,81 +98,23 @@
     </section>
 
     <!-- ====================================================
-         MAPPA + INFO
+         EMAIL
          ==================================================== -->
-    <section class="section" aria-labelledby="location-heading">
+    <section class="section" aria-labelledby="email-heading">
       <div class="container">
-
-        <h2 id="location-heading" class="sr-only">Dove trovarmi</h2>
-
-        <div class="contatti-grid">
-
-          <!-- Informazioni di contatto -->
-          <div>
-            <h2 class="contatti-where-title">Dove trovarmi</h2>
-
-            <div class="contatti-info__item">
-              <div class="contatti-info__icon" aria-hidden="true">📍</div>
-              <div>
-                <p class="contatti-info__label">Indirizzo</p>
-                <p class="contatti-info__value">Via Giovanni Pascoli, 14<br>00178 Roma (RM), Italia</p>
-              </div>
-            </div>
-
-            <div class="contatti-info__item">
-              <div class="contatti-info__icon" aria-hidden="true">✉️</div>
-              <div>
-                <p class="contatti-info__label">Email</p>
-                <p class="contatti-info__value">
-                  <a href="mailto:nikolaimartino05@gmail.com">nikolaimartino05@gmail.com</a>
-                </p>
-              </div>
-            </div>
-
-            <div class="contatti-info__item">
-              <div class="contatti-info__icon" aria-hidden="true">📞</div>
-              <div>
-                <p class="contatti-info__label">Telefono</p>
-                <p class="contatti-info__value">
-                  <a href="tel:+390612345678">+39 06 1234 5678</a>
-                </p>
-              </div>
-            </div>
-
-            <div class="contatti-info__item">
-              <div class="contatti-info__icon" aria-hidden="true">🕐</div>
-              <div>
-                <p class="contatti-info__label">Orari di disponibilità</p>
-                <p class="contatti-info__value">Lunedì – Venerdì: 9:00 – 18:00<br>Sabato: su appuntamento</p>
-              </div>
-            </div>
-
-            <div class="contatti-info__item">
-              <div class="contatti-info__icon" aria-hidden="true">🚇</div>
-              <div>
-                <p class="contatti-info__label">Come raggiungermi</p>
-                <p class="contatti-info__value">
-                  Metro B (blu) — fermata Ponte Mammolo, poi bus verso Via Tiburtina. Bus 409 e 542 nelle vicinanze del campus IED Roma. Parcheggio disponibile in zona.
-                </p>
-              </div>
+        <div class="contatti-email">
+          <h2 class="contatti-email__title" id="email-heading">Scrivimi</h2>
+          <p class="contatti-email__text">Per collaborazioni, progetti o semplici domande puoi contattarmi direttamente via email.</p>
+          <div class="contatti-info__item contatti-info__item--center">
+            <div class="contatti-info__icon" aria-hidden="true">✉️</div>
+            <div>
+              <p class="contatti-info__label">Email</p>
+              <p class="contatti-info__value">
+                <a href="mailto:nikolaimartino05@gmail.com">nikolaimartino05@gmail.com</a>
+              </p>
             </div>
           </div>
-
-          <!-- Mappa Google Maps -->
-          <div>
-            <div class="map-wrap">
-              <iframe
-                src="https://maps.google.com/maps?q=Via+Giovanni+Pascoli+14,+00178+Roma+RM,+Italia&amp;output=embed"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Mappa della posizione di Nikolai Martino a Roma"
-              ></iframe>
-            </div>
-          </div>
-
         </div>
-
       </div>
     </section>
 
@@ -187,7 +129,21 @@
           Compila il modulo con i dettagli del tuo progetto. Ti rispondo entro 24 ore lavorative.
         </p>
 
-        <form class="form form-container-wide" method="post" novalidate>
+        <div class="form-alert form-alert--success" id="form-success" role="status" hidden>
+          Grazie! Il tuo messaggio è stato inviato. Ti rispondo entro 24 ore lavorative.
+        </div>
+
+        <form
+          class="form form-container-wide form--live"
+          action="https://formsubmit.co/nikolaimartino05@gmail.com"
+          method="POST"
+          accept-charset="UTF-8"
+        >
+          <input type="hidden" name="_subject" value="Nuovo messaggio dal sito — Contatti">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://nikolaimartino05-bot.github.io/progettazione_multimediale_esame_2026/contatti.html?invio=ok">
+          <input type="text" name="_honey" class="form__honey" tabindex="-1" autocomplete="off" aria-hidden="true">
 
           <div class="form__row form__row--2">
             <div class="form__group">
@@ -272,12 +228,9 @@
           </ul>
         </nav>
 
-                <div>
+        <div>
           <p class="footer__heading">Contatti</p>
           <p class="footer__contact-item"><a href="mailto:nikolaimartino05@gmail.com">nikolaimartino05@gmail.com</a></p>
-          <p class="footer__contact-item"><a href="tel:+390612345678">+39 06 1234 5678</a></p>
-          <p class="footer__contact-item">Roma, Italia</p>
-          <p class="footer__contact-item">Lun–Ven, 9:00–18:00</p>
         </div>
 
       </div>
