@@ -329,8 +329,9 @@
           Scrivimi un messaggio, sarò felice di discutere come posso aiutarti a dare forma alla tua idea.
         </p>
 
-        <div class="form-alert form-alert--success" id="form-success" role="status" hidden>
-          Grazie! Il tuo messaggio è stato inviato. Ti rispondo entro 24 ore lavorative.
+        <div class="form-alert form-alert--success" id="form-success" role="status" aria-live="polite">
+          <p class="form-alert__title">Messaggio inviato ✓</p>
+          <p class="form-alert__text">Grazie! Il tuo messaggio è stato inviato correttamente. Ti rispondo entro 24 ore lavorative.</p>
         </div>
 
         <form
@@ -343,7 +344,7 @@
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_next" value="https://nikolaimartino05-bot.github.io/progettazione_multimediale_esame_2026/index.html?invio=ok#contact-form-heading">
-          <input type="text" name="_honey" class="form__honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
 
           <div class="form__row form__row--2">
             <div class="form__group">

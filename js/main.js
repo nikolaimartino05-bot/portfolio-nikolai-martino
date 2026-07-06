@@ -336,7 +336,7 @@ document.querySelectorAll('.carousel').forEach(initCarousel);
   const params = new URLSearchParams(window.location.search);
   const successEl = document.getElementById('form-success');
   if (successEl && params.get('invio') === 'ok') {
-    successEl.hidden = false;
+    successEl.classList.add('is-visible');
     successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
     window.history.replaceState({}, '', window.location.pathname + (window.location.hash || ''));
   }
