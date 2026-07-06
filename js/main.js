@@ -334,10 +334,21 @@ document.querySelectorAll('.carousel').forEach(initCarousel);
    ------------------------------------------------------------ */
 (function () {
   const params = new URLSearchParams(window.location.search);
-  const successEl = document.getElementById('form-success');
-  if (successEl && params.get('invio') === 'ok') {
-    successEl.classList.add('is-visible');
-    successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+  if (params.get('invio') === 'ok') {
+    const form = document.querySelector('.form--live');
+    const container = form?.closest('.container');
+    if (container && form) {
+      const successEl = document.createElement('div');
+      successEl.className = 'form-alert form-alert--success is-visible';
+      successEl.setAttribute('role', 'status');
+      successEl.setAttribute('aria-live', 'polite');
+      successEl.innerHTML =
+        '<p class="form-alert__title">Messaggio inviato ✓</p>' +
+        '<p class="form-alert__text">Grazie! Il tuo messaggio è stato inviato correttamente. Ti rispondo entro 24 ore lavorative.</p>';
+      container.insertBefore(successEl, form);
+      successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
     window.history.replaceState({}, '', window.location.pathname + (window.location.hash || ''));
   }
 
