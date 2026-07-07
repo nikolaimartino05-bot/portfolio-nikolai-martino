@@ -2578,6 +2578,24 @@ input[name="_honey"] {
   font-style: italic;
 }
 
+.pf-project__figure--centered {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.lv-moodboard-figure {
+  max-width: 520px;
+}
+
+.lv-moodboard-img {
+  aspect-ratio: auto;
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  max-height: 72vh;
+  margin-inline: auto;
+}
+
 .pf-project__watch-btn {
   font-size: var(--size-sm);
   padding: 0.85rem 2rem;
