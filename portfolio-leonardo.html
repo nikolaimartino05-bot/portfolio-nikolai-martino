@@ -18,40 +18,30 @@
   <link rel="icon" href="img/logo/logo-nm-clean.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260707c">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261125o">
   <script src="js/cookie-consent.js"></script>
 </head>
-<body class="has-starfield">
-
-  <div class="starfield" id="starfield" aria-hidden="true"></div>
-
-  <header class="navbar navbar--solid">
-    <nav class="navbar__inner" aria-label="Navigazione principale">
-      <ul class="navbar__links navbar__links--left">
-        <li><a href="index.html" class="navbar__link">Home</a></li>
-        <li><a href="bio.html" class="navbar__link">Bio</a></li>
-      </ul>
-      <a href="index.html" class="navbar__logo" aria-label="Nikolai Martino — Homepage">
-        <img src="img/logo/logo-nm-clean.png" alt="Logo NM" class="navbar__logo-img">
-      </a>
-      <ul class="navbar__links navbar__links--right">
-        <li><a href="portfolio.html" class="navbar__link active" aria-current="page">Portfolio</a></li>
-        <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
-      </ul>
-      <button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu" aria-label="Apri menu">☰</button>
-    </nav>
-    <div class="navbar__mobile" id="navbar-menu">
-      <ul class="navbar__mobile-links">
-        <li><a href="index.html" class="navbar__link">Home</a></li>
-        <li><a href="bio.html" class="navbar__link">Bio</a></li>
-        <li><a href="portfolio.html" class="navbar__link active">Portfolio</a></li>
-        <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
-      </ul>
+<body>
+    <header class="site-header site-header--solid">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-logo">Nikolai</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="overlay-nav" aria-label="Apri menu">
+        <span class="menu-btn__lines" aria-hidden="true"><span></span><span></span></span>
+      </button>
     </div>
   </header>
 
-  <main id="main-content">
+  <nav class="overlay-nav" id="overlay-nav" aria-label="Menu principale">
+    <ul class="overlay-nav__links">
+      <li><a class="overlay-nav__link" href="index.html">Home</a></li>
+      <li><a class="overlay-nav__link" href="portfolio.html">Portfolio</a></li>
+      <li><a class="overlay-nav__link" href="bio.html">Bio</a></li>
+      <li><a class="overlay-nav__link" href="contatti.html">Contatti</a></li>
+    </ul>
+    <p class="overlay-nav__meta">Media Design · Roma · IED</p>
+  </nav>
+<main id="main-content">
 
     <section class="pv-hero" aria-labelledby="lv-heading">
       <div class="container">
@@ -227,57 +217,53 @@
       <span class="bio-page-divider__line"></span>
     </div>
 
-    <!-- V — UI DESIGN -->
-    <section class="pv-section ps-gallery-section" aria-labelledby="lv-ui-heading">
-      <div class="container">
-        <div class="pv-section__header">
-          <span class="pv-section__num" aria-hidden="true">V</span>
-          <div>
-            <p class="pv-section__label">UI Design</p>
-            <h2 class="pv-section__title" id="lv-ui-heading">Le schermate Figma</h2>
-          </div>
-        </div>
-        <p class="pv-section__desc">
-          Cinque schermate Figma esportate nei mockup iPhone 14 Pro — dalla home all'attestato finale, con estetica rinascimentale-futuristica e gamification integrata.
+    <!-- V — UI DESIGN: phone rail, no decorative bg -->
+    <section class="phone-section" aria-labelledby="lv-ui-heading">
+      <div class="phone-section__head">
+        <p class="eyebrow">UI Design</p>
+        <h2 id="lv-ui-heading">Le schermate Figma</h2>
+        <p>
+          Schermate estratte e messe in fila — senza sfondo dietro. Solo l’interfaccia sul telefono,
+          dalla home all’attestato.
         </p>
-
-        <div class="lv-phones lv-phones--mockups">
-          <figure class="lv-phones__item">
-            <button class="ps-gallery__btn ps-gallery__btn--phone" data-img="img/esame-leonardo/mockups/01-home.png" data-caption="01 — Home Screen" aria-label="Home Screen">
-              <img src="img/esame-leonardo/mockups/01-home.png" alt="Figma — Home Screen Il Viaggio di Leonardo" loading="lazy">
-              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
-            </button>
-            <figcaption class="lv-phones__cap">01 — Home</figcaption>
-          </figure>
-          <figure class="lv-phones__item">
-            <button class="ps-gallery__btn ps-gallery__btn--phone" data-img="img/esame-leonardo/mockups/02-ar.png" data-caption="02 — AR Scanner" aria-label="AR Scanner">
-              <img src="img/esame-leonardo/mockups/02-ar.png" alt="Figma — AR Scanner" loading="lazy">
-              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
-            </button>
-            <figcaption class="lv-phones__cap">02 — AR</figcaption>
-          </figure>
-          <figure class="lv-phones__item">
-            <button class="ps-gallery__btn ps-gallery__btn--phone" data-img="img/esame-leonardo/mockups/03-quiz.png" data-caption="03 — Quiz interattivo" aria-label="Quiz">
-              <img src="img/esame-leonardo/mockups/03-quiz.png" alt="Figma — Quiz interattivo" loading="lazy">
-              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
-            </button>
-            <figcaption class="lv-phones__cap">03 — Quiz</figcaption>
-          </figure>
-          <figure class="lv-phones__item">
-            <button class="ps-gallery__btn ps-gallery__btn--phone" data-img="img/esame-leonardo/mockups/04-profilo.png" data-caption="04 — Profilo e badge" aria-label="Profilo">
-              <img src="img/esame-leonardo/mockups/04-profilo.png" alt="Figma — Profilo utente" loading="lazy">
-              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
-            </button>
-            <figcaption class="lv-phones__cap">04 — Profilo</figcaption>
-          </figure>
-          <figure class="lv-phones__item">
-            <button class="ps-gallery__btn ps-gallery__btn--phone" data-img="img/esame-leonardo/mockups/05-attestato.png" data-caption="05 — Attestato di genio" aria-label="Attestato">
-              <img src="img/esame-leonardo/mockups/05-attestato.png" alt="Figma — Attestato di genio" loading="lazy">
-              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
-            </button>
-            <figcaption class="lv-phones__cap">05 — Attestato</figcaption>
-          </figure>
-        </div>
+      </div>
+      <div class="phone-rail" tabindex="0" aria-label="Scorri le schermate Leonardo">
+        <figure class="phone phone--bezel">
+          <button class="phone__frame" data-img="img/esame-leonardo/figma/01_home.png" data-caption="Home" aria-label="Home">
+            <img src="img/esame-leonardo/figma/01_home.png" alt="Home — Il Viaggio di Leonardo" loading="lazy">
+          </button>
+          <figcaption class="phone__cap">Home</figcaption>
+        </figure>
+        <figure class="phone phone--bezel">
+          <button class="phone__frame" data-img="img/esame-leonardo/figma/02_mappa.png" data-caption="Mappa" aria-label="Mappa">
+            <img src="img/esame-leonardo/figma/02_mappa.png" alt="Mappa museo" loading="lazy">
+          </button>
+          <figcaption class="phone__cap">Mappa</figcaption>
+        </figure>
+        <figure class="phone phone--bezel">
+          <button class="phone__frame" data-img="img/esame-leonardo/figma/03_ar.png" data-caption="AR" aria-label="AR">
+            <img src="img/esame-leonardo/figma/03_ar.png" alt="Scanner AR" loading="lazy">
+          </button>
+          <figcaption class="phone__cap">AR</figcaption>
+        </figure>
+        <figure class="phone phone--bezel">
+          <button class="phone__frame" data-img="img/esame-leonardo/figma/04_quiz.png" data-caption="Quiz" aria-label="Quiz">
+            <img src="img/esame-leonardo/figma/04_quiz.png" alt="Quiz interattivo" loading="lazy">
+          </button>
+          <figcaption class="phone__cap">Quiz</figcaption>
+        </figure>
+        <figure class="phone phone--bezel">
+          <button class="phone__frame" data-img="img/esame-leonardo/figma/05_profilo.png" data-caption="Profilo" aria-label="Profilo">
+            <img src="img/esame-leonardo/figma/05_profilo.png" alt="Profilo utente" loading="lazy">
+          </button>
+          <figcaption class="phone__cap">Profilo</figcaption>
+        </figure>
+        <figure class="phone phone--bezel">
+          <button class="phone__frame" data-img="img/esame-leonardo/figma/06_attestato.png" data-caption="Attestato" aria-label="Attestato">
+            <img src="img/esame-leonardo/figma/06_attestato.png" alt="Attestato di genio" loading="lazy">
+          </button>
+          <figcaption class="phone__cap">Attestato</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -467,6 +453,6 @@
     </div>
   </div>
 
-  <script src="js/main.js?v=20260707b"></script>
+  <script src="js/main.js?v=20261125o"></script>
 </body>
 </html>

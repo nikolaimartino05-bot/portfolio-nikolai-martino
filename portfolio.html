@@ -3,528 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Portfolio — Nikolai Martino, Media Design IED Roma</title>
-  <meta name="description" content="I progetti del primo semestre allo IED di Roma: video editing, Photoshop, Illustrator e design grafico. Dall'idea al pixel.">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Portfolio — Nikolai Martino">
-  <meta property="og:description" content="Progetti di Media Design del primo semestre allo IED di Roma.">
-  <meta property="og:image" content="img/esame-video/Screenshot%202026-05-10%20alle%2013.44.56.png">
-  <meta property="og:url" content="https://nikolaimartino.com/portfolio.html">
-  <meta property="og:type" content="website">
-
-  <!-- Favicon -->
+  <title>Portfolio — Nikolai Martino</title>
+  <meta name="description" content="Case study: Coca-Cola × MFW, Il Viaggio di Leonardo, Photoshop, Illustrator, video e Liceo Artistico.">
   <link rel="icon" href="img/logo/logo-nm-clean.png" type="image/png">
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/style.css?v=20260706b">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261125o3">
   <script src="js/cookie-consent.js"></script>
 </head>
-<body class="has-starfield">
+<body>
 
-  <div class="starfield" id="starfield" aria-hidden="true"></div>
-
-  <!-- ======================================================
-       NAVBAR
-       ====================================================== -->
-  <header class="navbar navbar--solid">
-    <nav class="navbar__inner" aria-label="Navigazione principale">
-      <ul class="navbar__links navbar__links--left">
-        <li><a href="index.html" class="navbar__link">Home</a></li>
-        <li><a href="bio.html" class="navbar__link">Bio</a></li>
-      </ul>
-      <a href="index.html" class="navbar__logo" aria-label="Nikolai Martino — Homepage">
-        <img src="img/logo/logo-nm-clean.png" alt="Logo NM" class="navbar__logo-img">
-      </a>
-      <ul class="navbar__links navbar__links--right">
-        <li><a href="portfolio.html" class="navbar__link active" aria-current="page">Portfolio</a></li>
-        <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
-      </ul>
-      <button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu" aria-label="Apri menu">☰</button>
-    </nav>
-    <div class="navbar__mobile" id="navbar-menu">
-      <ul class="navbar__mobile-links">
-        <li><a href="index.html" class="navbar__link">Home</a></li>
-        <li><a href="bio.html" class="navbar__link">Bio</a></li>
-        <li><a href="portfolio.html" class="navbar__link active">Portfolio</a></li>
-        <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
-      </ul>
+  <header class="site-header site-header--solid">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-logo">Nikolai</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="overlay-nav" aria-label="Apri menu">
+        <span class="menu-btn__lines" aria-hidden="true"><span></span><span></span></span>
+      </button>
     </div>
   </header>
 
+  <nav class="overlay-nav" id="overlay-nav" aria-label="Menu principale">
+    <ul class="overlay-nav__links">
+      <li><a class="overlay-nav__link" href="index.html">Home</a></li>
+      <li><a class="overlay-nav__link" href="portfolio.html">Portfolio</a></li>
+      <li><a class="overlay-nav__link" href="bio.html">Bio</a></li>
+      <li><a class="overlay-nav__link" href="contatti.html">Contatti</a></li>
+    </ul>
+    <p class="overlay-nav__meta">Media Design · Roma · IED</p>
+  </nav>
+
   <main id="main-content">
+    <section class="page-hero container">
+      <p class="kicker">Our Work</p>
+      <h1>Explore Our Success Stories</h1>
+      <p>Case study selezionati: UX/UI, branding, editing e pittura.</p>
+    </section>
 
-    <!-- ====================================================
-         PORTFOLIO INTRO
-         ==================================================== -->
-    <section class="pf-intro" aria-labelledby="pf-heading">
-      <div class="container">
-
-        <p class="pf-intro__label">I miei lavori</p>
-        <h1 class="pf-intro__title" id="pf-heading">Portfolio</h1>
-
-        <div class="pf-intro__body">
-          <p class="pf-intro__lead">Dall'idea al pixel: i progetti del percorso IED.</p>
-          <p class="pf-intro__text">
-            Qui troverete una selezione dei lavori realizzati durante il mio percorso allo IED. È il racconto di un'evoluzione: ogni progetto è stato l'occasione per sporcarsi le mani, testare i miei limiti e padroneggiare i software che oggi definiscono il mio workflow. Non sono solo "compiti", ma tasselli di una ricerca costante tra estetica, tecnica e innovazione.
-          </p>
-        </div>
-
+    <section class="container section section--flush-top">
+      <div class="project-list">
+        <a href="portfolio-coca-cola.html" class="project-tile reveal">
+          <span class="project-tile__num">01</span>
+          <div class="project-tile__body">
+            <p class="project-tile__tag">UI / Branding · 2026</p>
+            <h2 class="project-tile__title">Progetto Coca-Cola × MFW</h2>
+            <p class="project-tile__cta">Entra per vederlo <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+        <a href="portfolio-leonardo.html" class="project-tile reveal">
+          <span class="project-tile__num">02</span>
+          <div class="project-tile__body">
+            <p class="project-tile__tag">UX/UI · 2026</p>
+            <h2 class="project-tile__title">Progetto Il Viaggio di Leonardo</h2>
+            <p class="project-tile__cta">Entra per vederlo <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+        <a href="portfolio-photoshop.html" class="project-tile reveal">
+          <span class="project-tile__num">03</span>
+          <div class="project-tile__body">
+            <p class="project-tile__tag">Photoshop · 2025</p>
+            <h2 class="project-tile__title">Progetto Digital Editing</h2>
+            <p class="project-tile__cta">Entra per vederlo <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+        <a href="portfolio-illustrator.html" class="project-tile reveal">
+          <span class="project-tile__num">04</span>
+          <div class="project-tile__body">
+            <p class="project-tile__tag">Illustrator · 2025</p>
+            <h2 class="project-tile__title">Progetto Type &amp; Logo</h2>
+            <p class="project-tile__cta">Entra per vederlo <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+        <a href="portfolio-video.html" class="project-tile reveal">
+          <span class="project-tile__num">05</span>
+          <div class="project-tile__body">
+            <p class="project-tile__tag">Video · 2025</p>
+            <h2 class="project-tile__title">Progetto Orizzonte in Fumo</h2>
+            <p class="project-tile__cta">Entra per vederlo <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+        <a href="portfolio-liceo.html" class="project-tile reveal">
+          <span class="project-tile__num">06</span>
+          <div class="project-tile__body">
+            <p class="project-tile__tag">Pittura · 2022–24</p>
+            <h2 class="project-tile__title">Progetto Liceo Artistico</h2>
+            <p class="project-tile__cta">Entra per vederlo <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
       </div>
     </section>
 
-    <!-- Divider -->
-    <div class="bio-page-divider" aria-hidden="true">
-      <span class="bio-page-divider__line"></span>
-      <span class="bio-page-divider__ornament">◆</span>
-      <span class="bio-page-divider__line"></span>
-    </div>
-
-    <!-- Guida: esplora i progetti -->
-    <section class="guide-cta-band" aria-labelledby="guide-cta-heading">
+    <section class="cta-band">
       <div class="container">
-        <h2 class="guide-cta-band__label" id="guide-cta-heading">Inizia da qui</h2>
-        <p class="guide-cta-band__text">Cinque progetti, cinque linguaggi visivi diversi. Scorri e clicca su ciascuno per vedere il processo completo.</p>
-        <a href="#progetto-leonardo" class="btn btn--outline">Inizia dal primo progetto ↓</a>
+        <p class="kicker kicker--light">Next step</p>
+        <h2>Lavoriamo insieme</h2>
+        <p>Disponibile per collaborazioni e stage.</p>
+        <a href="contatti.html" class="btn btn--white">Get in Touch <span class="btn__arrow">→</span></a>
       </div>
     </section>
-
-    <!-- ====================================================
-         PROGETTO 01 — UX/UI LEONARDO
-         ==================================================== -->
-    <article class="pf-project" id="progetto-leonardo" aria-labelledby="proj-lv-heading">
-      <div class="container">
-
-        <div class="pf-project__header">
-          <span class="pf-project__num" aria-hidden="true">01</span>
-          <div class="pf-project__meta-row">
-            <p class="pf-project__tag">UX/UI Design</p>
-            <p class="pf-project__year">2026 — IED Roma</p>
-          </div>
-          <h2 class="pf-project__title" id="proj-lv-heading">
-            Il Viaggio di Leonardo
-          </h2>
-        </div>
-
-        <div class="pf-project__body">
-          <div class="pf-project__desc">
-            <p>
-              Progetto d'esame per <em>Informazioni per l'arte, mezzi e metodi</em>: ho scelto la terza opzione del brief — un'esperienza interattiva per museo — e l'ho sviluppata per il <strong>Museo Nazionale Scienza e Tecnologia Leonardo da Vinci</strong> di Milano.
-            </p>
-            <p>
-              Un rebranding dell'ecosistema digitale che trasforma Leonardo da soggetto espositivo a mentore di un viaggio phygital: analisi del contesto, moodboard, target 18–30 anni, otto schermate UI e presentazione pitch.
-            </p>
-          </div>
-          <div class="pf-project__info">
-            <div class="pf-project__info-item">
-              <p class="pf-project__info-label">Software</p>
-              <p class="pf-project__info-val">Figma</p>
-            </div>
-            <div class="pf-project__info-item">
-              <p class="pf-project__info-label">Tipo</p>
-              <p class="pf-project__info-val">UX/UI &amp; Branding</p>
-            </div>
-            <div class="pf-project__info-item">
-              <p class="pf-project__info-label">Anno</p>
-              <p class="pf-project__info-val">2026</p>
-            </div>
-          </div>
-        </div>
-
-        <figure class="pf-project__figure">
-          <img
-            src="img/esame-leonardo/moodboard.png"
-            alt="Moodboard Il Viaggio di Leonardo — esame UX/UI IED Roma"
-            class="pf-project__preview lightbox-trigger"
-            loading="lazy"
-          >
-          <figcaption class="pf-project__figcap">Il Viaggio di Leonardo — moodboard e identità visiva, IED Roma 2026</figcaption>
-        </figure>
-
-        <div class="pf-project__cta-wrap">
-          <a href="portfolio-leonardo.html" class="btn btn--primary pf-project__watch-btn">
-            ◈ &nbsp;Scopri il progetto
-          </a>
-        </div>
-
-      </div>
-    </article>
-
-    <div class="bio-page-divider" aria-hidden="true">
-      <span class="bio-page-divider__line"></span>
-      <span class="bio-page-divider__ornament">◆</span>
-      <span class="bio-page-divider__line"></span>
-    </div>
-
-    <!-- ====================================================
-         PROGETTO 02 — VIDEO EDITING
-         ==================================================== -->
-    <article class="pf-project" id="progetto-video" aria-labelledby="proj-video-heading">
-      <div class="container">
-
-        <!-- Project header -->
-        <div class="pf-project__header">
-          <span class="pf-project__num" aria-hidden="true">02</span>
-          <div class="pf-project__meta-row">
-            <p class="pf-project__tag">Video Editing</p>
-            <p class="pf-project__year">2025 — IED Roma</p>
-          </div>
-          <h2 class="pf-project__title" id="proj-video-heading">
-            Orizzonte in Fumo
-          </h2>
-        </div>
-
-        <!-- Project description + side info -->
-        <div class="pf-project__body">
-          <div class="pf-project__desc">
-            <p>
-              Come si costruisce una narrazione partendo da elementi contrastanti? Per questo esame di video editing, il punto di partenza è stato un quintetto di parole chiave: <em>Olimpiadi, Bagno, Frammento, Reputazione</em> e <em>Narrazione</em>.
-            </p>
-            <p>
-              Il risultato è un corto dove il ritmo del montaggio diventa il vero protagonista, cucendo insieme riprese originali e atmosfere ricercate per dare vita a una storia carica di tensione e significato.
-            </p>
-          </div>
-          <div class="pf-project__info">
-            <div class="pf-project__info-item">
-              <p class="pf-project__info-label">Software</p>
-              <p class="pf-project__info-val">DaVinci Resolve</p>
-            </div>
-            <div class="pf-project__info-item">
-              <p class="pf-project__info-label">Tipo</p>
-              <p class="pf-project__info-val">Cortometraggio</p>
-            </div>
-            <div class="pf-project__info-item">
-              <p class="pf-project__info-label">Anno</p>
-              <p class="pf-project__info-val">2025</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Preview image -->
-        <figure class="pf-project__figure">
-          <img
-            src="img/esame-video/Screenshot%202026-05-10%20alle%2013.44.56.png"
-            alt="Anteprima del cortometraggio Orizzonte in Fumo — esame di Video Editing IED Roma"
-            class="pf-project__preview lightbox-trigger"
-            loading="lazy"
-          >
-          <figcaption class="pf-project__figcap">Orizzonte in Fumo — frame dal cortometraggio, IED Roma 2025</figcaption>
-        </figure>
-
-        <!-- Link to video page -->
-        <div class="pf-project__cta-wrap">
-          <a href="portfolio-video.html" class="btn btn--primary pf-project__watch-btn">
-            ▶ &nbsp;Guarda il corto
-          </a>
-        </div>
-
-      </div>
-    </article>
-
-    <!-- Divider -->
-    <div class="bio-page-divider" aria-hidden="true">
-      <span class="bio-page-divider__line"></span>
-      <span class="bio-page-divider__ornament">◆</span>
-      <span class="bio-page-divider__line"></span>
-    </div>
-
-    <!-- ====================================================
-         PROGETTO 03 — PHOTOSHOP
-         ==================================================== -->
-    <article class="pf-project" id="progetto-photoshop" aria-labelledby="proj-ps-heading">
-      <div class="container">
-
-        <!-- Project header -->
-        <div class="pf-project__header">
-          <span class="pf-project__num" aria-hidden="true">03</span>
-          <div class="pf-project__meta-row">
-            <p class="pf-project__tag">Photoshop</p>
-            <p class="pf-project__year">2025 — IED Roma</p>
-          </div>
-          <h2 class="pf-project__title" id="proj-ps-heading">
-            L'Arte del Digital Editing
-          </h2>
-        </div>
-
-        <!-- Project description + side info -->
-        <div class="pf-project__body">
-          <div class="pf-project__desc">
-            <p>
-              Confrontarmi con Photoshop è stato stimolante e formativo: mi ha dato gli strumenti per dare forma ai miei pensieri con una precisione chirurgica. Ogni elaborato racconta una sfida vinta e una nuova tecnica appresa.
-            </p>
-            <p>
-              Sono molto orgoglioso di presentare questi risultati e spero che il mio sguardo sul mondo digitale possa incuriosirvi e appassionarvi.
-            </p>
-          </div>
-          <div class="pf-project__info">
-            <div class="pf-project__info-item">
-              <p class="pf-project__info-label">Software</p>
-              <p class="pf-project__info-val">Adobe Photoshop</p>
-            </div>
-            <div class="pf-project__info-item">
-              <p class="pf-project__info-label">Tipo</p>
-              <p class="pf-project__info-val">Digital Editing</p>
-            </div>
-            <div class="pf-project__info-item">
-              <p class="pf-project__info-label">Anno</p>
-              <p class="pf-project__info-val">2025</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Preview image -->
-        <figure class="pf-project__figure">
-          <img
-            src="img/esame%20phothoshop/pages/page-07.png"
-            alt="Copertina Spotify — esame Photoshop IED Roma, digital editing"
-            class="pf-project__preview lightbox-trigger"
-            loading="lazy"
-          >
-          <figcaption class="pf-project__figcap">Copertina Spotify — digital editing Photoshop, IED Roma 2025</figcaption>
-        </figure>
-
-        <!-- Link to photoshop page -->
-        <div class="pf-project__cta-wrap">
-          <a href="portfolio-photoshop.html" class="btn btn--primary pf-project__watch-btn">
-            ◈ &nbsp;Scopri i lavori
-          </a>
-        </div>
-
-      </div>
-    </article>
-
-    <!-- Divider -->
-    <div class="bio-page-divider" aria-hidden="true">
-      <span class="bio-page-divider__line"></span>
-      <span class="bio-page-divider__ornament">◆</span>
-      <span class="bio-page-divider__line"></span>
-    </div>
-
-    <!-- ====================================================
-         PROGETTO 03 — ILLUSTRATOR
-         ==================================================== -->
-    <article class="pf-project" id="progetto-illustrator" aria-labelledby="proj-il-heading">
-      <div class="container">
-
-        <!-- Project header -->
-        <div class="pf-project__header">
-          <span class="pf-project__num" aria-hidden="true">04</span>
-          <div class="pf-project__meta-row">
-            <p class="pf-project__tag">Illustrator</p>
-            <p class="pf-project__year">2025 — IED Roma</p>
-          </div>
-          <h2 class="pf-project__title" id="proj-il-heading">
-            Dalla Sfida alla Forma
-          </h2>
-        </div>
-
-        <!-- Project description + side info -->
-        <div class="pf-project__body">
-          <div class="pf-project__desc">
-            <p>
-              Non sempre il processo creativo è lineare. Il mio approccio con Adobe Illustrator è iniziato come una sfida tecnica complessa, che richiedeva un rigore diverso da ogni altro software.
-            </p>
-            <p>
-              Attraverso la dedizione e lo studio costante, quella difficoltà iniziale si è trasformata in uno stimolo a superare i miei limiti. I lavori qui presenti sono il risultato di questa evoluzione: progetti vettoriali nati dalla precisione della geometria e rifiniti con una nuova consapevolezza tecnica.
-            </p>
-          </div>
-          <div class="pf-project__info">
-            <div class="pf-project__info-item">
-              <p class="pf-project__info-label">Software</p>
-              <p class="pf-project__info-val">Adobe Illustrator</p>
-            </div>
-            <div class="pf-project__info-item">
-              <p class="pf-project__info-label">Tipo</p>
-              <p class="pf-project__info-val">Type & Logo Design</p>
-            </div>
-            <div class="pf-project__info-item">
-              <p class="pf-project__info-label">Anno</p>
-              <p class="pf-project__info-val">2025</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Preview image -->
-        <figure class="pf-project__figure">
-          <img
-            src="img/esame%20illustrator/pages/page-25.png"
-            alt="Monogramma NM a colori — esame Illustrator IED Roma, logo design vettoriale"
-            class="pf-project__preview lightbox-trigger"
-            loading="lazy"
-          >
-          <figcaption class="pf-project__figcap">Monogramma NM — logo design vettoriale, IED Roma 2025</figcaption>
-        </figure>
-
-        <!-- Link to illustrator page -->
-        <div class="pf-project__cta-wrap">
-          <a href="portfolio-illustrator.html" class="btn btn--primary pf-project__watch-btn">
-            ◈ &nbsp;Scopri i lavori
-          </a>
-        </div>
-
-      </div>
-    </article>
-
-    <!-- Divider -->
-    <div class="bio-page-divider" aria-hidden="true">
-      <span class="bio-page-divider__line"></span>
-      <span class="bio-page-divider__ornament">◆</span>
-      <span class="bio-page-divider__line"></span>
-    </div>
-
-    <!-- ====================================================
-         PROGETTO 04 — LICEO ARTISTICO
-         ==================================================== -->
-    <article class="pf-project" id="progetto-liceo" aria-labelledby="proj-la-heading">
-      <div class="container">
-
-        <!-- Project header -->
-        <div class="pf-project__header">
-          <span class="pf-project__num" aria-hidden="true">05</span>
-          <div class="pf-project__meta-row">
-            <p class="pf-project__tag">Liceo Artistico</p>
-            <p class="pf-project__year">2022–2024 — Milano</p>
-          </div>
-          <h2 class="pf-project__title" id="proj-la-heading">
-            Background Artistico:<br>L'Eredità del Liceo
-          </h2>
-        </div>
-
-        <!-- Project description + side info -->
-        <div class="pf-project__body">
-          <div class="pf-project__desc">
-            <p>
-              Presento qui una selezione di opere realizzate durante gli anni del Liceo Artistico. Anche se il mio attuale workflow allo IED è focalizzato sull'uso di software avanzati, considero queste sperimentazioni a pastello una parte essenziale della mia identità.
-            </p>
-            <p>
-              Padroneggiare le tecniche tradizionali mi ha insegnato a gestire la composizione e l'impatto visivo molto prima di toccare un computer. È una visione a 360° della mia creatività: una competenza che porto con me in ogni nuovo progetto digitale.
-            </p>
-          </div>
-          <div class="pf-project__info">
-            <div class="pf-project__info-item">
-              <p class="pf-project__info-label">Tecnica</p>
-              <p class="pf-project__info-val">Pastello, Acrilico</p>
-            </div>
-            <div class="pf-project__info-item">
-              <p class="pf-project__info-label">Tipo</p>
-              <p class="pf-project__info-val">Pittura Figurativa</p>
-            </div>
-            <div class="pf-project__info-item">
-              <p class="pf-project__info-label">Anno</p>
-              <p class="pf-project__info-val">2022–2024</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Preview image -->
-        <figure class="pf-project__figure">
-          <img
-            src="img/liceo%20artistico%20caravaggio/IMG_4185.jpg"
-            alt="Pianto Colorato — acrilico su tela, Liceo Artistico Caravaggio Milano"
-            class="pf-project__preview lightbox-trigger"
-            loading="lazy"
-          >
-          <figcaption class="pf-project__figcap">Pianto Colorato — acrilico su tela, Liceo Artistico Caravaggio 2024</figcaption>
-        </figure>
-
-        <!-- Link to liceo page -->
-        <div class="pf-project__cta-wrap">
-          <a href="portfolio-liceo.html" class="btn btn--primary pf-project__watch-btn">
-            ◈ &nbsp;Scopri le opere
-          </a>
-        </div>
-
-      </div>
-    </article>
-
-    <!-- ====================================================
-         CTA FINALE
-         ==================================================== -->
-    <section class="pf-cta-section" aria-labelledby="pf-cta-heading">
-      <div class="container">
-        <p class="pf-cta__label">Hai un progetto in mente?</p>
-        <h2 class="pf-cta__heading" id="pf-cta-heading">Lavoriamo insieme</h2>
-        <p class="pf-cta__sub">Sono disponibile per collaborazioni, stage e nuove opportunità nel mondo del design digitale.</p>
-        <a href="contatti.html" class="btn btn--primary">Contattami →</a>
-      </div>
-    </section>
-
   </main>
 
-  <!-- ======================================================
-       LIGHTBOX
-       ====================================================== -->
-  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Visualizzatore immagini">
-    <button class="lightbox__close" aria-label="Chiudi lightbox">&#10005;</button>
-    <div class="lightbox__content">
-      <button class="lightbox__prev" aria-label="Immagine precedente">&#8592;</button>
-      <img class="lightbox__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
-      <button class="lightbox__next" aria-label="Immagine successiva">&#8594;</button>
-    </div>
-  </div>
-
-  <!-- ======================================================
-       FOOTER
-       ====================================================== -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
         <div>
-          <p class="footer__brand-name">Nikolai Martino</p>
+          <p class="footer__brand">Nikolai Martino</p>
           <p class="footer__tagline">Media Designer · Roma</p>
-                    <div class="footer__social">
-            <a href="https://www.linkedin.com/in/nikolai-martino-71b693373/" class="footer__social-link" aria-label="LinkedIn di Nikolai Martino" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-            <a href="https://www.behance.net/nikolaimartino/moodboards" class="footer__social-link" aria-label="Behance di Nikolai Martino" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.72zm-7.249-2h4.099c-.011-.474-.091-.925-.233-1.31-.347-.968-1.152-1.51-2.057-1.51-.966 0-1.868.542-2.246 1.51-.181.462-.277.925-.287 1.31h.724zm-11.178 0l-3.299-2.08V15h-3V9.001h5.001c2.001 0 3.001 1 3.001 3s-1 3-3.001 3h-2V15h2l3.299 2.08V15zm-3.299-4H3v2h2.001c.553 0 1.001-.448 1.001-1s-.448-1-1.001-1z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/_nikomartino_/" class="footer__social-link" aria-label="Instagram di Nikolai Martino" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-            </a>
-          </div>
-</div>
-        <nav aria-label="Navigazione footer">
-          <p class="footer__heading">Navigazione</p>
-          <ul class="footer__nav">
-            <li><a href="index.html" class="footer__nav-link">Home</a></li>
-            <li><a href="bio.html" class="footer__nav-link">Bio</a></li>
-            <li><a href="portfolio.html" class="footer__nav-link">Portfolio</a></li>
-            <li><a href="contatti.html" class="footer__nav-link">Contatti</a></li>
-          </ul>
-        </nav>
-                <div>
-          <p class="footer__heading">Contatti</p>
-          <p class="footer__contact-item"><a href="mailto:nikolaimartino05@gmail.com">nikolaimartino05@gmail.com</a></p>
         </div>
-
+        <div>
+          <p class="footer__heading">Explore</p>
+          <ul class="footer__nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="bio.html">Bio</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Connect</p>
+          <p><a href="mailto:nikolaimartino05@gmail.com">nikolaimartino05@gmail.com</a></p>
+        </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copy">&copy; 2026 Nikolai Martino — Tutti i diritti riservati</p>
-        <a href="privacy.html" class="footer__privacy-link">Privacy Policy &amp; Cookie</a>
+        <p>&copy; 2026 Nikolai Martino</p>
+        <a href="privacy.html">Privacy &amp; Cookie</a>
       </div>
     </div>
   </footer>
 
-  <!-- Cookie Banner -->
-  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-banner-title" aria-live="polite">
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite">
     <div class="cookie-banner__inner">
-      <p class="cookie-banner__text" id="cookie-banner-title">
-        Questo sito utilizza cookie tecnici per garantire il corretto funzionamento.
-        Leggi la <a href="privacy.html">Privacy &amp; Cookie Policy</a> per saperne di più.
-      </p>
+      <p class="cookie-banner__text">Cookie tecnici. <a href="privacy.html">Privacy</a></p>
       <div class="cookie-banner__actions">
-        <button id="reject-cookies" type="button" class="btn btn--outline-white">Rifiuta</button>
-        <button id="accept-cookies" type="button" class="btn btn--primary">Accetta</button>
+        <button id="reject-cookies" type="button" class="btn btn--ghost-light">Rifiuta</button>
+        <button id="accept-cookies" type="button" class="btn btn--white">Accetta</button>
       </div>
     </div>
   </div>
 
-  <script src="js/main.js?v=20260706b"></script>
+  <script src="js/main.js?v=20261125o"></script>
 </body>
 </html>

@@ -20,44 +20,34 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css?v=20260706b">
+  <link rel="stylesheet" href="css/style.css?v=20261125o">
   <script src="js/cookie-consent.js"></script>
 </head>
-<body class="has-starfield">
-
-  <div class="starfield" id="starfield" aria-hidden="true"></div>
-
-  <!-- ======================================================
+<body>
+<!-- ======================================================
        NAVBAR
        ====================================================== -->
-  <header class="navbar navbar--solid">
-    <nav class="navbar__inner" aria-label="Navigazione principale">
-      <ul class="navbar__links navbar__links--left">
-        <li><a href="index.html" class="navbar__link">Home</a></li>
-        <li><a href="bio.html" class="navbar__link">Bio</a></li>
-      </ul>
-      <a href="index.html" class="navbar__logo" aria-label="Nikolai Martino — Homepage">
-        <img src="img/logo/logo-nm-clean.png" alt="Logo NM" class="navbar__logo-img">
-      </a>
-      <ul class="navbar__links navbar__links--right">
-        <li><a href="portfolio.html" class="navbar__link active" aria-current="page">Portfolio</a></li>
-        <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
-      </ul>
-      <button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu" aria-label="Apri menu">☰</button>
-    </nav>
-    <div class="navbar__mobile" id="navbar-menu">
-      <ul class="navbar__mobile-links">
-        <li><a href="index.html" class="navbar__link">Home</a></li>
-        <li><a href="bio.html" class="navbar__link">Bio</a></li>
-        <li><a href="portfolio.html" class="navbar__link active">Portfolio</a></li>
-        <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
-      </ul>
+      <header class="site-header site-header--solid">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-logo">Nikolai</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="overlay-nav" aria-label="Apri menu">
+        <span class="menu-btn__lines" aria-hidden="true"><span></span><span></span></span>
+      </button>
     </div>
   </header>
 
-  <main id="main-content">
+  <nav class="overlay-nav" id="overlay-nav" aria-label="Menu principale">
+    <ul class="overlay-nav__links">
+      <li><a class="overlay-nav__link" href="index.html">Home</a></li>
+      <li><a class="overlay-nav__link" href="portfolio.html">Portfolio</a></li>
+      <li><a class="overlay-nav__link" href="bio.html">Bio</a></li>
+      <li><a class="overlay-nav__link" href="contatti.html">Contatti</a></li>
+    </ul>
+    <p class="overlay-nav__meta">Media Design · Roma · IED</p>
+  </nav>
+<main id="main-content">
 
     <!-- ====================================================
          PROJECT HEADER
@@ -526,6 +516,6 @@
     </div>
   </div>
 
-  <script src="js/main.js?v=20260706b"></script>
+  <script src="js/main.js?v=20261125o"></script>
 </body>
 </html>
