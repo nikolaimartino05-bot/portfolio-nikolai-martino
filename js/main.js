@@ -279,8 +279,9 @@ document.addEventListener('keydown', (e) => {
   const closeBtn = document.getElementById('contact-modal-btn');
   const submitBtn = document.getElementById('contact-submit');
   const TO = 'nikolaimartino05@gmail.com';
-  const ENDPOINT = `https://formsubmit.co/ajax/${TO}`;
-  const TIMEOUT_MS = 7000;
+  const ENDPOINT = 'https://api.web3forms.com/submit';
+  const ACCESS_KEY = 'cf48a8c5-dadf-4c0a-8341-1fdb7bca0a9f';
+  const TIMEOUT_MS = 10000;
 
   const showModal = ({ title, text, kicker = 'Contatti', closable = false }) => {
     if (!modal) return;
@@ -368,21 +369,20 @@ document.addEventListener('keydown', (e) => {
             Accept: 'application/json',
           },
           body: JSON.stringify({
+            access_key: ACCESS_KEY,
             name,
             email,
-            _replyto: email,
             subject: subject || 'Nuovo messaggio dal portfolio',
             message,
-            _template: 'table',
-            _captcha: 'false',
+            from_name: 'Portfolio Nikolai Martino',
+            replyto: email,
           }),
         },
         TIMEOUT_MS
       );
 
       const data = await res.json().catch(() => ({}));
-      delivered =
-        res.ok && data.success !== 'false' && data.success !== false;
+      delivered = res.ok && (data.success === true || data.success === 'true');
     } catch (_) {
       delivered = false;
     }
