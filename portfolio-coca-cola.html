@@ -13,12 +13,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261125o">
+  <link rel="stylesheet" href="css/style.css?v=20261125o8">
   <script src="js/cookie-consent.js"></script>
 </head>
 <body>
 
-    <header class="site-header site-header--solid">
+  <header class="site-header site-header--solid">
     <div class="site-header__inner">
       <a href="index.html" class="site-logo">Nikolai</a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="overlay-nav" aria-label="Apri menu">
@@ -36,7 +36,8 @@
     </ul>
     <p class="overlay-nav__meta">Media Design · Roma · IED</p>
   </nav>
-<main id="main-content">
+
+  <main id="main-content">
 
     <section class="pv-hero container">
       <a href="portfolio.html" class="pv-back">← Torna ai lavori</a>
@@ -103,34 +104,101 @@
       </div>
     </section>
 
-    <section class="pv-section">
+    <section class="pv-section" aria-labelledby="cc-cartaceo-heading">
       <div class="container">
         <div class="pv-section__header">
           <span class="pv-section__num">II</span>
           <div>
-            <p class="pv-section__label">Limited edition</p>
-            <h2 class="pv-section__title">Bottiglie vestite di moda</h2>
+            <p class="pv-section__label">Print</p>
+            <h2 class="pv-section__title" id="cc-cartaceo-heading">Materiale cartaceo</h2>
           </div>
         </div>
         <p class="pv-section__desc">
-          Limited edition MFW 2026: fronte rosso iconico, retro in texture fashion con QR per sbloccare esperienze esclusive.
-          Collaborazioni visuali con i grandi nomi della moda milanese.
+          Die-cut a forma di contour bottle: fronte limited edition MFW 2026, retro fashion con QR per sbloccare esperienze esclusive.
         </p>
-        <div class="bottle-row">
-          <img class="lightbox-trigger" src="img/esame-coca-cola/hero/cocacola_prada_milano.png" alt="Coca-Cola × Prada" loading="lazy">
-          <img class="lightbox-trigger" src="img/esame-coca-cola/hero/cocacola_versace_milano.png" alt="Coca-Cola × Versace" loading="lazy">
-          <img class="lightbox-trigger" src="img/esame-coca-cola/hero/cocacola_diesel_milano.png" alt="Coca-Cola × Diesel" loading="lazy">
-          <img class="lightbox-trigger" src="img/esame-coca-cola/hero/cocacola_moschino_milano.png" alt="Coca-Cola × Moschino" loading="lazy">
+        <div class="cartaceo-row">
+          <figure class="cartaceo-card">
+            <button class="cartaceo-card__btn" data-img="img/esame-coca-cola/cartaceo/fronte.jpg" data-caption="Cartaceo — fronte" aria-label="Cartaceo fronte">
+              <img src="img/esame-coca-cola/cartaceo/fronte.jpg" alt="Oggetto cartaceo Coca-Cola — fronte Limited Edition MFW 2026" loading="lazy">
+            </button>
+            <figcaption>Fronte</figcaption>
+          </figure>
+          <figure class="cartaceo-card">
+            <button class="cartaceo-card__btn" data-img="img/esame-coca-cola/cartaceo/retro.jpg" data-caption="Cartaceo — retro" aria-label="Cartaceo retro">
+              <img src="img/esame-coca-cola/cartaceo/retro.jpg" alt="Oggetto cartaceo Coca-Cola — retro fashion con QR" loading="lazy">
+            </button>
+            <figcaption>Retro</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- APP SCREENS — no decorative bg, phones in a rail -->
+    <section class="partners-band" aria-labelledby="cc-partners-heading">
+      <div class="container">
+        <p class="partners-band__label">Collaborazioni</p>
+        <h2 class="partners-band__title" id="cc-partners-heading">I partner di lusso</h2>
+        <ul class="partners-band__logos">
+          <li><img src="img/esame-coca-cola/partner/prada.png" alt="Prada" loading="lazy"></li>
+          <li><img src="img/esame-coca-cola/partner/dolce-gabbana.png" alt="Dolce &amp; Gabbana" loading="lazy"></li>
+          <li><img src="img/esame-coca-cola/partner/valentino.png" alt="Valentino" loading="lazy"></li>
+          <li><img src="img/esame-coca-cola/partner/gucci.png" alt="Gucci" loading="lazy"></li>
+          <li><img src="img/esame-coca-cola/partner/chanel.png" alt="Chanel" loading="lazy"></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="pv-section">
+      <div class="container">
+        <div class="pv-section__header">
+          <span class="pv-section__num">III</span>
+          <div>
+            <p class="pv-section__label">5 icone</p>
+            <h2 class="pv-section__title">Bottiglie vestite di moda</h2>
+          </div>
+        </div>
+        <p class="pv-section__desc">
+          Cinque installazioni urbane a Milano: bottiglie giganti vestite dalle maison, con QR per sbloccare premi nell’app.
+        </p>
+        <div class="icone-grid">
+          <figure class="icone-card">
+            <button class="icone-card__btn" data-img="img/esame-coca-cola/icone/valentino.jpg" data-caption="Valentino" aria-label="Valentino">
+              <img src="img/esame-coca-cola/icone/valentino.jpg" alt="Installazione Coca-Cola × Valentino — Piazza Duomo" loading="lazy">
+            </button>
+            <figcaption>Valentino</figcaption>
+          </figure>
+          <figure class="icone-card">
+            <button class="icone-card__btn" data-img="img/esame-coca-cola/icone/prada.jpg" data-caption="Prada" aria-label="Prada">
+              <img src="img/esame-coca-cola/icone/prada.jpg" alt="Installazione Coca-Cola × Prada — Gae Aulenti" loading="lazy">
+            </button>
+            <figcaption>Prada</figcaption>
+          </figure>
+          <figure class="icone-card">
+            <button class="icone-card__btn" data-img="img/esame-coca-cola/icone/chanel.jpg" data-caption="Chanel" aria-label="Chanel">
+              <img src="img/esame-coca-cola/icone/chanel.jpg" alt="Installazione Coca-Cola × Chanel — Galleria Vittorio Emanuele" loading="lazy">
+            </button>
+            <figcaption>Chanel</figcaption>
+          </figure>
+          <figure class="icone-card icone-card--wide">
+            <button class="icone-card__btn" data-img="img/esame-coca-cola/icone/dolce-gabbana.jpg" data-caption="Dolce &amp; Gabbana" aria-label="Dolce &amp; Gabbana">
+              <img src="img/esame-coca-cola/icone/dolce-gabbana.jpg" alt="Installazione Coca-Cola × Dolce &amp; Gabbana" loading="lazy">
+            </button>
+            <figcaption>Dolce &amp; Gabbana</figcaption>
+          </figure>
+          <figure class="icone-card icone-card--wide">
+            <button class="icone-card__btn" data-img="img/esame-coca-cola/icone/gucci.jpg" data-caption="Gucci" aria-label="Gucci">
+              <img src="img/esame-coca-cola/icone/gucci.jpg" alt="Installazione Coca-Cola × Gucci — Piazza Duomo" loading="lazy">
+            </button>
+            <figcaption>Gucci</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section class="phone-section" aria-labelledby="cc-ui-heading">
       <div class="phone-section__head">
-        <p class="eyebrow">UI App</p>
+        <p class="kicker">UI App</p>
         <h2 id="cc-ui-heading">Schermate dell’app</h2>
-        <p>Flusso Figma estratto e allineato — splash, onboarding, home, mappa, AR, premi. Nessuno sfondo dietro: solo i telefoni.</p>
+        <p>Interfaccia progettata in Figma.</p>
       </div>
       <div class="phone-rail" tabindex="0" aria-label="Scorri le schermate Coca-Cola">
         <figure class="phone">
@@ -208,66 +276,104 @@
       </div>
     </section>
 
-    <section class="pv-section">
-      <div class="container">
-        <div class="pv-section__header">
-          <span class="pv-section__num">III</span>
-          <div>
-            <p class="pv-section__label">OOH &amp; Social</p>
-            <h2 class="pv-section__title">Città e feed</h2>
-          </div>
-        </div>
-        <p class="pv-section__desc">
-          Billboard, display verticali del pop-up, LinkedIn cover e post Instagram: un sistema rosso/bianco/nero
-          con tipografia fashion e bottle “dressed”.
-        </p>
-        <div class="ps-gallery">
-          <figure>
-            <button class="ps-gallery__btn" data-img="img/esame-coca-cola/print/ooh-billboard-coca-cola-mfw.png" data-caption="Billboard OOH" aria-label="Billboard">
-              <img class="ps-gallery__img" src="img/esame-coca-cola/print/ooh-billboard-coca-cola-mfw.png" alt="Billboard Coca-Cola MFW" loading="lazy">
-            </button>
-            <figcaption class="ps-gallery__cap">Billboard OOH</figcaption>
-          </figure>
-          <figure>
-            <button class="ps-gallery__btn" data-img="img/esame-coca-cola/print/ooh-display-verticali-coca-cola-mfw.png" data-caption="Display verticali" aria-label="Display">
-              <img class="ps-gallery__img" src="img/esame-coca-cola/print/ooh-display-verticali-coca-cola-mfw.png" alt="Display verticali pop-up" loading="lazy">
-            </button>
-            <figcaption class="ps-gallery__cap">Display verticali</figcaption>
-          </figure>
-          <figure>
-            <button class="ps-gallery__btn" data-img="img/esame-coca-cola/print/linkedin-cover-coca-cola-mfw.png" data-caption="LinkedIn cover" aria-label="LinkedIn">
-              <img class="ps-gallery__img" src="img/esame-coca-cola/print/linkedin-cover-coca-cola-mfw.png" alt="LinkedIn cover Coca-Cola HBC" loading="lazy">
-            </button>
-            <figcaption class="ps-gallery__cap">LinkedIn cover</figcaption>
-          </figure>
-          <figure>
-            <button class="ps-gallery__btn" data-img="img/esame-coca-cola/print/instagram-post-all-partnerships-mfw.png" data-caption="Instagram post" aria-label="Instagram">
-              <img class="ps-gallery__img" src="img/esame-coca-cola/print/instagram-post-all-partnerships-mfw.png" alt="Post Instagram partnership" loading="lazy">
-            </button>
-            <figcaption class="ps-gallery__cap">Instagram post</figcaption>
-          </figure>
-          <figure>
-            <button class="ps-gallery__btn" data-img="img/esame-coca-cola/print/instagram-story-2-coca-cola-mfw.png" data-caption="Instagram story" aria-label="Story">
-              <img class="ps-gallery__img" src="img/esame-coca-cola/print/instagram-story-2-coca-cola-mfw.png" alt="Instagram story MFW" loading="lazy">
-            </button>
-            <figcaption class="ps-gallery__cap">Instagram story</figcaption>
-          </figure>
-          <figure>
-            <button class="ps-gallery__btn" data-img="img/esame-coca-cola/hero/urban_takeover_corale.png" data-caption="Urban takeover" aria-label="Urban">
-              <img class="ps-gallery__img" src="img/esame-coca-cola/hero/urban_takeover_corale.png" alt="Urban takeover Milano" loading="lazy">
-            </button>
-            <figcaption class="ps-gallery__cap">Urban takeover</figcaption>
-          </figure>
-        </div>
+    <section class="phone-section" aria-labelledby="cc-ig-posts-heading">
+      <div class="phone-section__head">
+        <p class="kicker">Social</p>
+        <h2 id="cc-ig-posts-heading">Instagram — 3 post</h2>
+        <p>Mockup feed estratti dal progetto.</p>
+      </div>
+      <div class="phone-rail" tabindex="0" aria-label="Post Instagram Coca-Cola">
+        <figure class="phone">
+          <button class="phone__frame" data-img="img/esame-coca-cola/social/ig-post-01.jpg" data-caption="Instagram post 1" aria-label="Instagram post 1">
+            <img src="img/esame-coca-cola/social/ig-post-01.jpg" alt="Post Instagram 1 — Coca-Cola MFW" loading="lazy">
+          </button>
+          <figcaption class="phone__cap">Post 01</figcaption>
+        </figure>
+        <figure class="phone">
+          <button class="phone__frame" data-img="img/esame-coca-cola/social/ig-post-02.jpg" data-caption="Instagram post 2" aria-label="Instagram post 2">
+            <img src="img/esame-coca-cola/social/ig-post-02.jpg" alt="Post Instagram 2 — Coca-Cola MFW" loading="lazy">
+          </button>
+          <figcaption class="phone__cap">Post 02</figcaption>
+        </figure>
+        <figure class="phone">
+          <button class="phone__frame" data-img="img/esame-coca-cola/social/ig-post-03.jpg" data-caption="Instagram post 3" aria-label="Instagram post 3">
+            <img src="img/esame-coca-cola/social/ig-post-03.jpg" alt="Post Instagram 3 — Coca-Cola MFW" loading="lazy">
+          </button>
+          <figcaption class="phone__cap">Post 03</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="pf-cta-section">
+    <section class="phone-section" aria-labelledby="cc-ig-stories-heading">
+      <div class="phone-section__head">
+        <p class="kicker">Social</p>
+        <h2 id="cc-ig-stories-heading">Instagram — 3 stories</h2>
+        <p>Stories verticali della campagna.</p>
+      </div>
+      <div class="phone-rail" tabindex="0" aria-label="Stories Instagram Coca-Cola">
+        <figure class="phone">
+          <button class="phone__frame" data-img="img/esame-coca-cola/social/ig-story-01.jpg" data-caption="Instagram story 1" aria-label="Instagram story 1">
+            <img src="img/esame-coca-cola/social/ig-story-01.jpg" alt="Story Instagram 1 — Coca-Cola MFW" loading="lazy">
+          </button>
+          <figcaption class="phone__cap">Story 01</figcaption>
+        </figure>
+        <figure class="phone">
+          <button class="phone__frame" data-img="img/esame-coca-cola/social/ig-story-02.jpg" data-caption="Instagram story 2" aria-label="Instagram story 2">
+            <img src="img/esame-coca-cola/social/ig-story-02.jpg" alt="Story Instagram 2 — Coca-Cola MFW" loading="lazy">
+          </button>
+          <figcaption class="phone__cap">Story 02</figcaption>
+        </figure>
+        <figure class="phone">
+          <button class="phone__frame" data-img="img/esame-coca-cola/social/ig-story-03.jpg" data-caption="Instagram story 3" aria-label="Instagram story 3">
+            <img src="img/esame-coca-cola/social/ig-story-03.jpg" alt="Story Instagram 3 — Coca-Cola MFW" loading="lazy">
+          </button>
+          <figcaption class="phone__cap">Story 03</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="pv-section" aria-labelledby="cc-li-heading">
       <div class="container">
-        <p class="pf-cta__label">Altro progetto</p>
-        <h2 class="pf-cta__heading">Il Viaggio di Leonardo</h2>
-        <p class="pf-cta__sub">UX/UI museo phygital — stessa attenzione alle schermate app.</p>
-        <a href="portfolio-leonardo.html" class="btn btn--primary">Vedi il progetto →</a>
+        <div class="pv-section__header">
+          <span class="pv-section__num">IV</span>
+          <div>
+            <p class="pv-section__label">LinkedIn</p>
+            <h2 class="pv-section__title" id="cc-li-heading">Cover page</h2>
+          </div>
+        </div>
+        <p class="pv-section__desc">Cover e profilo company page Coca-Cola HBC × MFW 2026.</p>
+        <figure class="media-frame">
+          <button class="ps-gallery__btn" data-img="img/esame-coca-cola/social/linkedin-cover-mockup.jpg" data-caption="LinkedIn cover page" aria-label="LinkedIn cover page">
+            <img class="ps-gallery__img ps-gallery__img--natural" src="img/esame-coca-cola/social/linkedin-cover-mockup.jpg" alt="LinkedIn cover page Coca-Cola HBC × MFW" loading="lazy">
+          </button>
+        </figure>
+      </div>
+    </section>
+
+    <section class="pv-section" aria-labelledby="cc-ooh-heading">
+      <div class="container">
+        <div class="pv-section__header">
+          <span class="pv-section__num">V</span>
+          <div>
+            <p class="pv-section__label">OOH</p>
+            <h2 class="pv-section__title" id="cc-ooh-heading">Billboard</h2>
+          </div>
+        </div>
+        <p class="pv-section__desc">Billboard urbano Milano Fashion Week.</p>
+        <figure class="media-frame">
+          <button class="ps-gallery__btn" data-img="img/esame-coca-cola/social/billboard-mockup.jpg" data-caption="Billboard OOH" aria-label="Billboard OOH">
+            <img class="ps-gallery__img ps-gallery__img--natural" src="img/esame-coca-cola/social/billboard-mockup.jpg" alt="Billboard Coca-Cola Milano Fashion Week" loading="lazy">
+          </button>
+        </figure>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <p class="kicker kicker--light">Altro progetto</p>
+        <h2>Il Viaggio di Leonardo</h2>
+        <p>UX/UI museo phygital — stessa attenzione alle schermate app.</p>
+        <a href="portfolio-leonardo.html" class="btn btn--white">Vedi il progetto <span class="btn__arrow">→</span></a>
       </div>
     </section>
 
@@ -277,26 +383,26 @@
     <div class="container">
       <div class="footer__grid">
         <div>
-          <p class="footer__brand-name">Nikolai Martino</p>
+          <p class="footer__brand">Nikolai Martino</p>
           <p class="footer__tagline">Media Designer · Roma</p>
         </div>
-        <nav aria-label="Navigazione footer">
-          <p class="footer__heading">Navigazione</p>
-          <ul class="footer__nav">
-            <li><a href="index.html" class="footer__nav-link">Home</a></li>
-            <li><a href="portfolio.html" class="footer__nav-link">Lavori</a></li>
-            <li><a href="bio.html" class="footer__nav-link">Bio</a></li>
-            <li><a href="contatti.html" class="footer__nav-link">Contatti</a></li>
-          </ul>
-        </nav>
         <div>
-          <p class="footer__heading">Contatti</p>
-          <p class="footer__contact-item"><a href="mailto:nikolaimartino05@gmail.com">nikolaimartino05@gmail.com</a></p>
+          <p class="footer__heading">Explore</p>
+          <ul class="footer__nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="bio.html">Bio</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Connect</p>
+          <p><a href="mailto:nikolaimartino05@gmail.com">nikolaimartino05@gmail.com</a></p>
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copy">&copy; 2026 Nikolai Martino</p>
-        <a href="privacy.html" class="footer__privacy-link">Privacy &amp; Cookie</a>
+        <p>&copy; 2026 Nikolai Martino</p>
+        <a href="privacy.html">Privacy &amp; Cookie</a>
       </div>
     </div>
   </footer>
@@ -307,8 +413,8 @@
         Questo sito utilizza cookie tecnici. <a href="privacy.html">Privacy Policy</a>
       </p>
       <div class="cookie-banner__actions">
-        <button id="reject-cookies" type="button" class="btn btn--outline-white">Rifiuta</button>
-        <button id="accept-cookies" type="button" class="btn btn--primary">Accetta</button>
+        <button id="reject-cookies" type="button" class="btn btn--ghost-light">Rifiuta</button>
+        <button id="accept-cookies" type="button" class="btn btn--white">Accetta</button>
       </div>
     </div>
   </div>
@@ -322,6 +428,6 @@
     </div>
   </div>
 
-  <script src="js/main.js?v=20261125o"></script>
+  <script src="js/main.js?v=20261125o8"></script>
 </body>
 </html>

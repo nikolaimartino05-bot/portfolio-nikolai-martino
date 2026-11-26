@@ -217,7 +217,7 @@ function stepLightbox(dir) {
 
 document.addEventListener('click', (e) => {
   const trigger = e.target.closest(
-    '.lightbox-trigger, .ps-gallery__btn, .phone__frame'
+    '.lightbox-trigger, .ps-gallery__btn, .phone__frame, .icone-card__btn, .cartaceo-card__btn'
   );
   if (!trigger) return;
   e.preventDefault();
