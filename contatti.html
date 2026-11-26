@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261126e">
+  <link rel="stylesheet" href="css/style.css?v=20261126f">
   <script src="js/cookie-consent.js"></script>
 </head>
 <body>
@@ -59,8 +59,16 @@
           </div>
         </aside>
 
-        <form class="form" id="contact-form" novalidate>
-          <input type="text" name="_gotcha" class="form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <form
+          class="form"
+          id="contact-form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input type="hidden" name="access_key" value="cf48a8c5-dadf-4c0a-8341-1fdb7bca0a9f">
+          <input type="hidden" name="from_name" value="Portfolio Nikolai Martino">
+          <input type="hidden" name="redirect" value="https://nikolaimartino05-bot.github.io/portfolio-nikolai-martino/contatti.html?invio=ok">
+          <input type="checkbox" name="botcheck" class="form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="form__row form__row--2">
             <div>
               <label class="form__label" for="nome">Nome *</label>
@@ -136,6 +144,6 @@
       </div>
     </div>
   </div>
-  <script src="js/main.js?v=20261126e"></script>
+  <script src="js/main.js?v=20261126f"></script>
 </body>
 </html>

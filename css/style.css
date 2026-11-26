@@ -1435,14 +1435,18 @@ h1.hero__title span {
 .contact-modal {
   position: fixed;
   inset: 0;
-  z-index: 80;
-  display: grid;
+  z-index: 2500;
+  display: none;
   place-items: center;
   padding: 1.25rem;
 }
 
+.contact-modal:not([hidden]) {
+  display: grid;
+}
+
 .contact-modal[hidden] {
-  display: none;
+  display: none !important;
 }
 
 .contact-modal__backdrop {

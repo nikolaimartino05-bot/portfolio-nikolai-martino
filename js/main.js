@@ -267,7 +267,7 @@ document.addEventListener('keydown', (e) => {
   else init();
 })();
 
-/* Contact form — popup + invio affidabile (timeout + mailto) */
+/* Contact form — submit nativo Web3Forms + popup */
 (() => {
   const form = document.getElementById('contact-form');
   if (!form) return;
@@ -275,17 +275,11 @@ document.addEventListener('keydown', (e) => {
   const modal = document.getElementById('contact-modal');
   const titleEl = document.getElementById('contact-modal-title');
   const textEl = document.getElementById('contact-modal-text');
-  const kickerEl = document.getElementById('contact-modal-kicker');
   const closeBtn = document.getElementById('contact-modal-btn');
   const submitBtn = document.getElementById('contact-submit');
-  const TO = 'nikolaimartino05@gmail.com';
-  const ENDPOINT = 'https://api.web3forms.com/submit';
-  const ACCESS_KEY = 'cf48a8c5-dadf-4c0a-8341-1fdb7bca0a9f';
-  const TIMEOUT_MS = 10000;
 
-  const showModal = ({ title, text, kicker = 'Contatti', closable = false }) => {
+  const showModal = (title, text, closable = true) => {
     if (!modal) return;
-    if (kickerEl) kickerEl.textContent = kicker;
     if (titleEl) titleEl.textContent = title;
     if (textEl) textEl.textContent = text;
     if (closeBtn) closeBtn.hidden = !closable;
@@ -309,103 +303,17 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal && !modal.hidden) hideModal();
   });
 
-  const openMailto = (name, email, subject, message) => {
-    const body = `Nome: ${name}\nEmail: ${email}\n\n${message}`;
-    const href = `mailto:${TO}?subject=${encodeURIComponent(subject || 'Messaggio dal portfolio')}&body=${encodeURIComponent(body)}`;
-    window.location.href = href;
-  };
-
-  const fetchWithTimeout = async (url, options, ms) => {
-    const ctrl = new AbortController();
-    const timer = setTimeout(() => ctrl.abort(), ms);
-    try {
-      return await fetch(url, { ...options, signal: ctrl.signal });
-    } finally {
-      clearTimeout(timer);
-    }
-  };
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const honeypot = form.querySelector('[name="_gotcha"]');
-    if (honeypot && honeypot.value) return;
-
-    const name = form.querySelector('#nome')?.value?.trim() || '';
-    const email = form.querySelector('#email')?.value?.trim() || '';
-    const subject = form.querySelector('#oggetto')?.value?.trim() || '';
-    const message = form.querySelector('#messaggio')?.value?.trim() || '';
-
-    if (!name || !email || !subject || !message) {
-      showModal({
-        title: 'Campi mancanti',
-        text: 'Compila tutti i campi obbligatori prima di inviare.',
-        closable: true,
-      });
-      return;
-    }
-
-    const original = submitBtn?.innerHTML;
+  // Non bloccare il submit: il form posta davvero a Web3Forms
+  form.addEventListener('submit', () => {
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.textContent = 'Invio…';
     }
-
-    showModal({
-      title: 'Messaggio in invio…',
-      text: 'Sto inviando il tuo messaggio. Un attimo.',
-      closable: false,
-    });
-
-    let delivered = false;
-
-    try {
-      const res = await fetchWithTimeout(
-        ENDPOINT,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-          },
-          body: JSON.stringify({
-            access_key: ACCESS_KEY,
-            name,
-            email,
-            subject: subject || 'Nuovo messaggio dal portfolio',
-            message,
-            from_name: 'Portfolio Nikolai Martino',
-            replyto: email,
-          }),
-        },
-        TIMEOUT_MS
-      );
-
-      const data = await res.json().catch(() => ({}));
-      delivered = res.ok && (data.success === true || data.success === 'true');
-    } catch (_) {
-      delivered = false;
-    }
-
-    if (delivered) {
-      form.reset();
-      showModal({
-        title: 'Messaggio inviato',
-        text: 'Grazie! Ti rispondo al più presto.',
-        closable: true,
-      });
-    } else {
-      showModal({
-        title: 'Apro la tua email…',
-        text: 'Sto aprendo l’app email con il messaggio già pronto. Premi Invia lì per completare.',
-        closable: true,
-      });
-      setTimeout(() => openMailto(name, email, subject, message), 450);
-    }
-
-    if (submitBtn) {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = original || 'Invia <span class="btn__arrow">→</span>';
-    }
+    showModal('Messaggio in invio…', 'Sto inviando il tuo messaggio. Un attimo.', false);
   });
+
+  if (new URLSearchParams(location.search).get('invio') === 'ok') {
+    showModal('Messaggio inviato', 'Grazie! Ti rispondo al più presto.', true);
+    history.replaceState({}, '', location.pathname);
+  }
 })();
