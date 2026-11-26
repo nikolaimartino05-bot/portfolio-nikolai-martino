@@ -1390,6 +1390,44 @@ h1.hero__title span {
 .contact-side__val a:hover { text-decoration: underline; }
 
 .form { display: grid; gap: 1.1rem; }
+
+.form__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form__hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--fg-faint);
+}
+
+.form__hint a:hover { text-decoration: underline; }
+
+.form-status {
+  margin: 0 0 1.25rem;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  border: 1px solid var(--fg);
+}
+
+.form-status--ok {
+  background: #141414;
+  color: #fafafa;
+  border-color: #141414;
+}
+
+.form-status--err {
+  background: #fff;
+  color: #141414;
+}
+
+.form-status[hidden] { display: none; }
 .form__row--2 { display: grid; gap: 1.1rem; }
 @media (min-width: 640px) {
   .form__row--2 { grid-template-columns: 1fr 1fr; }

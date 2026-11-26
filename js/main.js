@@ -267,11 +267,108 @@ document.addEventListener('keydown', (e) => {
   else init();
 })();
 
+/* Contact form → FormSubmit AJAX + mailto fallback */
+(() => {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const status = document.getElementById('form-status');
+  const submitBtn = document.getElementById('contact-submit');
+  const TO = 'nikolaimartino05@gmail.com';
+  const ENDPOINT = `https://formsubmit.co/ajax/${TO}`;
+
+  const setStatus = (type, html) => {
+    if (!status) return;
+    status.hidden = false;
+    status.className = `form-status form-status--${type}`;
+    status.innerHTML = html;
+  };
+
+  const openMailto = (name, email, subject, message) => {
+    const body = `Nome: ${name}\nEmail: ${email}\n\n${message}`;
+    const href = `mailto:${TO}?subject=${encodeURIComponent(subject || 'Messaggio dal portfolio')}&body=${encodeURIComponent(body)}`;
+    window.location.href = href;
+  };
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const honeypot = form.querySelector('[name="_gotcha"]');
+    if (honeypot && honeypot.value) return;
+
+    const name = form.querySelector('#nome')?.value?.trim() || '';
+    const email = form.querySelector('#email')?.value?.trim() || '';
+    const subject = form.querySelector('#oggetto')?.value?.trim() || '';
+    const message = form.querySelector('#messaggio')?.value?.trim() || '';
+
+    if (!name || !email || !subject || !message) {
+      setStatus('err', 'Compila tutti i campi obbligatori.');
+      return;
+    }
+
+    const original = submitBtn?.innerHTML;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Invio in corso…';
+    }
+    setStatus('ok', 'Sto inviando il messaggio…');
+
+    try {
+      const res = await fetch(ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          _replyto: email,
+          subject: subject || 'Nuovo messaggio dal portfolio',
+          message,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok || data.success === 'false' || data.success === false) {
+        throw new Error(data.message || 'Invio non riuscito');
+      }
+
+      form.reset();
+      setStatus(
+        'ok',
+        'Messaggio inviato. Controlla anche lo spam: alla prima volta FormSubmit può chiederti di confermare l’email.'
+      );
+    } catch (err) {
+      setStatus(
+        'err',
+        'Invio automatico non disponibile al momento. Apro la tua app email come alternativa…'
+      );
+      openMailto(name, email, subject, message);
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = original || 'Invia';
+      }
+    }
+  });
+})();
+
 if (new URLSearchParams(location.search).get('invio') === 'ok') {
-  const el = document.createElement('div');
-  el.className = 'toast-ok';
-  el.setAttribute('role', 'status');
-  el.textContent = 'Messaggio inviato. Ti rispondo al più presto.';
-  document.body.appendChild(el);
-  setTimeout(() => el.remove(), 4200);
+  const status = document.getElementById('form-status');
+  if (status) {
+    status.hidden = false;
+    status.className = 'form-status form-status--ok';
+    status.textContent = 'Messaggio inviato. Ti rispondo al più presto.';
+  } else {
+    const el = document.createElement('div');
+    el.className = 'toast-ok';
+    el.setAttribute('role', 'status');
+    el.textContent = 'Messaggio inviato. Ti rispondo al più presto.';
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 4200);
+  }
 }

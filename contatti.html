@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261125o">
+  <link rel="stylesheet" href="css/style.css?v=20261126c">
   <script src="js/cookie-consent.js"></script>
 </head>
 <body>
@@ -58,31 +58,35 @@
         </div>
       </aside>
 
-      <form class="form reveal" action="https://formsubmit.co/nikolaimartino05@gmail.com" method="POST" accept-charset="UTF-8">
-        <input type="hidden" name="_subject" value="Nuovo messaggio dal sito — Contatti">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://nikolaimartino05-bot.github.io/portfolio-nikolai-martino/contatti.html?invio=ok">
-        <input type="hidden" name="_honey" value="">
+      <div id="form-status" class="form-status" hidden role="status" aria-live="polite"></div>
+
+      <form class="form reveal" id="contact-form" novalidate>
+        <input type="text" name="_gotcha" class="form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="form__row form__row--2">
           <div>
             <label class="form__label" for="nome">Nome *</label>
-            <input class="form__input" type="text" id="nome" name="nome" required>
+            <input class="form__input" type="text" id="nome" name="name" required autocomplete="name">
           </div>
           <div>
             <label class="form__label" for="email">Email *</label>
-            <input class="form__input" type="email" id="email" name="email" required>
+            <input class="form__input" type="email" id="email" name="email" required autocomplete="email">
           </div>
         </div>
         <div>
           <label class="form__label" for="oggetto">Oggetto *</label>
-          <input class="form__input" type="text" id="oggetto" name="oggetto" required>
+          <input class="form__input" type="text" id="oggetto" name="subject" required>
         </div>
         <div>
           <label class="form__label" for="messaggio">Messaggio *</label>
-          <textarea class="form__textarea" id="messaggio" name="messaggio" required></textarea>
+          <textarea class="form__textarea" id="messaggio" name="message" required></textarea>
         </div>
-        <button type="submit" class="btn btn--black">Invia <span class="btn__arrow">→</span></button>
+        <button type="submit" class="btn btn--black" id="contact-submit">
+          Invia <span class="btn__arrow">→</span>
+        </button>
+        <p class="form__hint">
+          Oppure scrivimi direttamente a
+          <a href="mailto:nikolaimartino05@gmail.com">nikolaimartino05@gmail.com</a>
+        </p>
       </form>
     </section>
   </main>
@@ -124,6 +128,6 @@
       </div>
     </div>
   </div>
-  <script src="js/main.js?v=20261125o"></script>
+  <script src="js/main.js?v=20261126c"></script>
 </body>
 </html>
