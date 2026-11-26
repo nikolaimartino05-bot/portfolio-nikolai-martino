@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261126c">
+  <link rel="stylesheet" href="css/style.css?v=20261126d">
   <script src="js/cookie-consent.js"></script>
 </head>
 <body>
@@ -32,64 +32,72 @@
   </nav>
 
   <main id="main-content">
-    <section class="page-hero container">
+    <section class="page-hero page-hero--center container">
       <p class="kicker">Contact</p>
       <h1>Get in Touch</h1>
       <p>Collaborazioni, stage, brief creativi. Scrivimi.</p>
     </section>
 
-    <section class="container contact-layout">
-      <aside class="contact-side reveal">
-        <div class="contact-side__item">
-          <p class="contact-side__label">Email</p>
-          <p class="contact-side__val"><a href="mailto:nikolaimartino05@gmail.com">nikolaimartino05@gmail.com</a></p>
-        </div>
-        <div class="contact-side__item">
-          <p class="contact-side__label">Base</p>
-          <p class="contact-side__val">Roma, Italia</p>
-        </div>
-        <div class="contact-side__item">
-          <p class="contact-side__label">Social</p>
-          <p class="contact-side__val">
-            <a href="https://www.instagram.com/_nikomartino_/" target="_blank" rel="noopener noreferrer">Instagram</a>
-            ·
-            <a href="https://www.linkedin.com/in/nikolai-martino-71b693373/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </p>
-        </div>
-      </aside>
+    <section class="container contact-wrap">
+      <div class="contact-layout reveal">
+        <aside class="contact-side">
+          <div class="contact-side__item">
+            <p class="contact-side__label">Email</p>
+            <p class="contact-side__val"><a href="mailto:nikolaimartino05@gmail.com">nikolaimartino05@gmail.com</a></p>
+          </div>
+          <div class="contact-side__item">
+            <p class="contact-side__label">Base</p>
+            <p class="contact-side__val">Roma, Italia</p>
+          </div>
+          <div class="contact-side__item">
+            <p class="contact-side__label">Social</p>
+            <p class="contact-side__val">
+              <a href="https://www.instagram.com/_nikomartino_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              ·
+              <a href="https://www.linkedin.com/in/nikolai-martino-71b693373/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </p>
+          </div>
+        </aside>
 
-      <div id="form-status" class="form-status" hidden role="status" aria-live="polite"></div>
-
-      <form class="form reveal" id="contact-form" novalidate>
-        <input type="text" name="_gotcha" class="form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div class="form__row form__row--2">
-          <div>
-            <label class="form__label" for="nome">Nome *</label>
-            <input class="form__input" type="text" id="nome" name="name" required autocomplete="name">
+        <form class="form" id="contact-form" novalidate>
+          <input type="text" name="_gotcha" class="form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form__row form__row--2">
+            <div>
+              <label class="form__label" for="nome">Nome *</label>
+              <input class="form__input" type="text" id="nome" name="name" required autocomplete="name">
+            </div>
+            <div>
+              <label class="form__label" for="email">Email *</label>
+              <input class="form__input" type="email" id="email" name="email" required autocomplete="email">
+            </div>
           </div>
           <div>
-            <label class="form__label" for="email">Email *</label>
-            <input class="form__input" type="email" id="email" name="email" required autocomplete="email">
+            <label class="form__label" for="oggetto">Oggetto *</label>
+            <input class="form__input" type="text" id="oggetto" name="subject" required>
           </div>
-        </div>
-        <div>
-          <label class="form__label" for="oggetto">Oggetto *</label>
-          <input class="form__input" type="text" id="oggetto" name="subject" required>
-        </div>
-        <div>
-          <label class="form__label" for="messaggio">Messaggio *</label>
-          <textarea class="form__textarea" id="messaggio" name="message" required></textarea>
-        </div>
-        <button type="submit" class="btn btn--black" id="contact-submit">
-          Invia <span class="btn__arrow">→</span>
-        </button>
-        <p class="form__hint">
-          Oppure scrivimi direttamente a
-          <a href="mailto:nikolaimartino05@gmail.com">nikolaimartino05@gmail.com</a>
-        </p>
-      </form>
+          <div>
+            <label class="form__label" for="messaggio">Messaggio *</label>
+            <textarea class="form__textarea" id="messaggio" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--black" id="contact-submit">
+            Invia <span class="btn__arrow">→</span>
+          </button>
+        </form>
+      </div>
     </section>
   </main>
+
+  <div id="contact-modal" class="contact-modal" hidden aria-hidden="true">
+    <div class="contact-modal__backdrop" data-close-modal></div>
+    <div class="contact-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+      <p class="contact-modal__kicker" id="contact-modal-kicker">Contatti</p>
+      <h2 class="contact-modal__title" id="contact-modal-title">Invio in corso…</h2>
+      <p class="contact-modal__text" id="contact-modal-text">Sto preparando il tuo messaggio.</p>
+      <button type="button" class="btn btn--black contact-modal__btn" id="contact-modal-btn" data-close-modal hidden>
+        Chiudi
+      </button>
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="container">
@@ -128,6 +136,6 @@
       </div>
     </div>
   </div>
-  <script src="js/main.js?v=20261126c"></script>
+  <script src="js/main.js?v=20261126d"></script>
 </body>
 </html>

@@ -1371,13 +1371,37 @@ h1.hero__title span {
   font-size: 0.8rem;
 }
 
+.page-hero--center {
+  text-align: center;
+}
+.page-hero--center h1 {
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-hero--center p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 36ch;
+}
+
+.contact-wrap {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4.5rem;
+}
+
 .contact-layout {
   display: grid;
   gap: 2.5rem;
-  padding-bottom: 4rem;
+  width: min(100%, 42rem);
 }
 @media (min-width: 860px) {
-  .contact-layout { grid-template-columns: 0.9fr 1.1fr; gap: 3.5rem; }
+  .contact-layout {
+    width: min(100%, 52rem);
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 3rem;
+    align-items: start;
+  }
 }
 .contact-side__item + .contact-side__item { margin-top: 1.4rem; }
 .contact-side__label {
@@ -1408,26 +1432,69 @@ h1.hero__title span {
 
 .form__hint a:hover { text-decoration: underline; }
 
-.form-status {
-  margin: 0 0 1.25rem;
-  padding: 0.9rem 1.1rem;
-  font-size: 0.92rem;
-  line-height: 1.45;
-  border: 1px solid var(--fg);
+.contact-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
 }
 
-.form-status--ok {
-  background: #141414;
-  color: #fafafa;
-  border-color: #141414;
+.contact-modal[hidden] {
+  display: none;
 }
 
-.form-status--err {
-  background: #fff;
+.contact-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+}
+
+.contact-modal__dialog {
+  position: relative;
+  width: min(100%, 22rem);
+  background: #fafafa;
   color: #141414;
+  padding: 1.75rem 1.5rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
 }
 
-.form-status[hidden] { display: none; }
+.contact-modal__kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+.contact-modal__title {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.contact-modal__text {
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+  color: var(--fg-muted, #555);
+  line-height: 1.45;
+}
+
+.contact-modal__btn {
+  margin-top: 1.35rem;
+}
+
+.contact-modal__btn[hidden] {
+  display: none;
+}
+
+body.contact-modal-open {
+  overflow: hidden;
+}
 .form__row--2 { display: grid; gap: 1.1rem; }
 @media (min-width: 640px) {
   .form__row--2 { grid-template-columns: 1fr 1fr; }

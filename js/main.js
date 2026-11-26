@@ -267,27 +267,61 @@ document.addEventListener('keydown', (e) => {
   else init();
 })();
 
-/* Contact form → FormSubmit AJAX + mailto fallback */
+/* Contact form — popup + invio affidabile (timeout + mailto) */
 (() => {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
-  const status = document.getElementById('form-status');
+  const modal = document.getElementById('contact-modal');
+  const titleEl = document.getElementById('contact-modal-title');
+  const textEl = document.getElementById('contact-modal-text');
+  const kickerEl = document.getElementById('contact-modal-kicker');
+  const closeBtn = document.getElementById('contact-modal-btn');
   const submitBtn = document.getElementById('contact-submit');
   const TO = 'nikolaimartino05@gmail.com';
   const ENDPOINT = `https://formsubmit.co/ajax/${TO}`;
+  const TIMEOUT_MS = 7000;
 
-  const setStatus = (type, html) => {
-    if (!status) return;
-    status.hidden = false;
-    status.className = `form-status form-status--${type}`;
-    status.innerHTML = html;
+  const showModal = ({ title, text, kicker = 'Contatti', closable = false }) => {
+    if (!modal) return;
+    if (kickerEl) kickerEl.textContent = kicker;
+    if (titleEl) titleEl.textContent = title;
+    if (textEl) textEl.textContent = text;
+    if (closeBtn) closeBtn.hidden = !closable;
+    modal.hidden = false;
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('contact-modal-open');
   };
+
+  const hideModal = () => {
+    if (!modal) return;
+    modal.hidden = true;
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('contact-modal-open');
+  };
+
+  modal?.querySelectorAll('[data-close-modal]').forEach((el) => {
+    el.addEventListener('click', hideModal);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && !modal.hidden) hideModal();
+  });
 
   const openMailto = (name, email, subject, message) => {
     const body = `Nome: ${name}\nEmail: ${email}\n\n${message}`;
     const href = `mailto:${TO}?subject=${encodeURIComponent(subject || 'Messaggio dal portfolio')}&body=${encodeURIComponent(body)}`;
     window.location.href = href;
+  };
+
+  const fetchWithTimeout = async (url, options, ms) => {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), ms);
+    try {
+      return await fetch(url, { ...options, signal: ctrl.signal });
+    } finally {
+      clearTimeout(timer);
+    }
   };
 
   form.addEventListener('submit', async (e) => {
@@ -302,73 +336,76 @@ document.addEventListener('keydown', (e) => {
     const message = form.querySelector('#messaggio')?.value?.trim() || '';
 
     if (!name || !email || !subject || !message) {
-      setStatus('err', 'Compila tutti i campi obbligatori.');
+      showModal({
+        title: 'Campi mancanti',
+        text: 'Compila tutti i campi obbligatori prima di inviare.',
+        closable: true,
+      });
       return;
     }
 
     const original = submitBtn?.innerHTML;
     if (submitBtn) {
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Invio in corso…';
+      submitBtn.textContent = 'Invio…';
     }
-    setStatus('ok', 'Sto inviando il messaggio…');
+
+    showModal({
+      title: 'Messaggio in invio…',
+      text: 'Sto inviando il tuo messaggio. Un attimo.',
+      closable: false,
+    });
+
+    let delivered = false;
 
     try {
-      const res = await fetch(ENDPOINT, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
+      const res = await fetchWithTimeout(
+        ENDPOINT,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            _replyto: email,
+            subject: subject || 'Nuovo messaggio dal portfolio',
+            message,
+            _template: 'table',
+            _captcha: 'false',
+          }),
         },
-        body: JSON.stringify({
-          name,
-          email,
-          _replyto: email,
-          subject: subject || 'Nuovo messaggio dal portfolio',
-          message,
-          _template: 'table',
-          _captcha: 'false',
-        }),
-      });
+        TIMEOUT_MS
+      );
 
       const data = await res.json().catch(() => ({}));
+      delivered =
+        res.ok && data.success !== 'false' && data.success !== false;
+    } catch (_) {
+      delivered = false;
+    }
 
-      if (!res.ok || data.success === 'false' || data.success === false) {
-        throw new Error(data.message || 'Invio non riuscito');
-      }
-
+    if (delivered) {
       form.reset();
-      setStatus(
-        'ok',
-        'Messaggio inviato. Controlla anche lo spam: alla prima volta FormSubmit può chiederti di confermare l’email.'
-      );
-    } catch (err) {
-      setStatus(
-        'err',
-        'Invio automatico non disponibile al momento. Apro la tua app email come alternativa…'
-      );
-      openMailto(name, email, subject, message);
-    } finally {
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = original || 'Invia';
-      }
+      showModal({
+        title: 'Messaggio inviato',
+        text: 'Grazie! Ti rispondo al più presto.',
+        closable: true,
+      });
+    } else {
+      showModal({
+        title: 'Apro la tua email…',
+        text: 'Sto aprendo l’app email con il messaggio già pronto. Premi Invia lì per completare.',
+        closable: true,
+      });
+      setTimeout(() => openMailto(name, email, subject, message), 450);
+    }
+
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = original || 'Invia <span class="btn__arrow">→</span>';
     }
   });
 })();
-
-if (new URLSearchParams(location.search).get('invio') === 'ok') {
-  const status = document.getElementById('form-status');
-  if (status) {
-    status.hidden = false;
-    status.className = 'form-status form-status--ok';
-    status.textContent = 'Messaggio inviato. Ti rispondo al più presto.';
-  } else {
-    const el = document.createElement('div');
-    el.className = 'toast-ok';
-    el.setAttribute('role', 'status');
-    el.textContent = 'Messaggio inviato. Ti rispondo al più presto.';
-    document.body.appendChild(el);
-    setTimeout(() => el.remove(), 4200);
-  }
-}
